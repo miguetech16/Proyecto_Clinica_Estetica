@@ -44,3 +44,36 @@ header {
     margin-left: 20px;
     margin-top: 10px;
 }
+
+.pie-pagina{
+    width: 100%;
+}
+
+.pie-pagina .grupo-1 a img{
+    width: 80px;
+    float: right;
+}
+
+.pie-pagina .grupo-1 .nav_footer ul a li{
+    color: white;
+    list-style: none;
+    font-size: 20px;
+    text-align: left;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.pie-pagina .grupo-1 .nav_footer ul a li:hover{
+    color: #ecd8ba;
+}
+
+.pie-pagina .grupo-1{
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+.pie-pagina .grupo-1 small{
+    font-size: 15px;
+}
