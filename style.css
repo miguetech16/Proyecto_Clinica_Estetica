@@ -77,3 +77,71 @@ header {
 .pie-pagina .grupo-1 small{
     font-size: 15px;
 }
+
+body {
+    background-color: #f9f7f2;
+  }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+
+.item1-l {
+    grid-column: 1;
+  }
+  
+.item2-r {
+    grid-column: 2/4;
+}
+
+.item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+.introText {
+    font-family: verdana;
+    font-size: 15px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .txtCentrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: verdana;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+  }
+
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  
+  h1 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
