@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ecd8ba;
+    height: 70px;
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    text-align: center;
+}
+
+.bar_nav {
+    margin: 0px;
+    background: #eeeae4;
+}
+
+.bar_nav ul {
+    margin: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+.bar_nav ul li {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.bar_nav ul li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.bar_nav ul li a:hover {
+    background: #ecd8ba;
+}
+
+#logo{
+    height: 100px;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
