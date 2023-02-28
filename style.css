@@ -302,4 +302,22 @@ body {
     width: 95%;
     margin-bottom: 1em;
   }
+
+  .faqs{
+    padding: 0px 1em 1em;
+ }
+ 
+ details{
+    background: #eeeae4;
+    padding: 1em 1em;
+    border-radius: 7px;
+    margin-top: 1.5em;
+    font-size: 14px;
+    cursor: pointer;
+ }
+ 
+ details summary{
+    outline: none;
+ }
+ 
   
