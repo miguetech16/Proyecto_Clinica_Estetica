@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div w3-include-html="templates/header.html"></div>
+    
+    <main>
+        <div class="grid">
+            <div class="item1-r">
+                <a href="https://www.google.es/maps/?hl=es" target="_blank"><img class=mapa src="imagenes/mapa.jpg" width="100%";></a>
+            </div>
+
+            <div class="item2-l">
+                <form class="formCont">
+                    <h2>CONTÁCTANOS</h2>
+                    <p>Nombre:<input placeholder="Escriba su nombre aquí.." required></input></p>
+                    <p>Email:<input placeholder="Escriba su email aquí.." required></input></p>
+                    <p>Teléfono:<input placeholder="Escriba su teléfono de contacto aquí.." required></input></p>
+                    <p>Tratamiento:</p>
+                    <select name="combo" id="combo">
+                        <optgroup label="Tipo 1">
+                            <option value="TratamientoX">Tratamiento X</option>
+                            <option value="TratamientoX">Tratamiento X</option>
+                            <option value="TratamientoX">Tratamiento X</option>
+                        </optgroup>
+                        <optgroup label="Tipo 2">
+                            <option value="TratamientoX">Tratamiento X</option>
+                            <option value="TratamientoX">Tratamiento X</option>
+                            <option value="TratamientoX">Tratamiento X</option>
+                        </optgroup>
+                    </select>
+                    <p>Asunto:<input placeholder="Asunto de su consulta..." required></input></p>
+                    <p>Mensaje:<textarea placeholder="Contenido de su consulta..." required></textarea></input></p>
+                    <button class="btn">Enviar</button>
+                </form>
+            </div>
+
+            <div class="item1-r">
+                <h2>Información de Contacto de la Clínica</h2>
+                <div class="grid">
+                    <div w3-include-html="templates/card.html"></div>
+                    <div w3-include-html="templates/card.html"></div>
+                    <div w3-include-html="templates/card.html"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div w3-include-html="templates/footer.html"></div>
+</body>
+<script>
+    w3IncludeHTML();
+</script>
+</html>
