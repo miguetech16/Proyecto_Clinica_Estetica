@@ -42,7 +42,7 @@ header {
     height: 100px;
     width: 200px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 18px;
 }
 
 .pie-pagina{
@@ -144,4 +144,69 @@ body {
     text-align: center;
     font-size: 40px;
     margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+
+  .card{
+    background: #aeaeae;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    margin-left: 10%;
+  }
+
+  .card img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 100%;
+  display: block;
+  margin-left: -15%;
+}
+
+.card .contenido-texto-card{
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .card .contenido-texto-card p{
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-justify: inter-word;
+    font-size: 15px;
+  }
+
+  .btn{
+    padding:8px 12px;
+    font-family:'Montserrat',sans-serif;
+    border:2px solid #78788c;
+    background:0;
+    cursor: pointer;
+    transition:all .5s;
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+  .btn:hover{
+    background:#78788c;
+    color:#fff;
   }
