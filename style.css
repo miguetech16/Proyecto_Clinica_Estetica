@@ -59,48 +59,44 @@ body {
     background-color: #f9f7f2;
   }
 
+/*Grid section*/
+
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-right: 2em;
-    margin-left: 2em;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin: 2em 2em 2em 2em;
+  grid-auto-flow: row dense;
+}
 
-.item1-l {
-    grid-column: 1;
-  }
+.item-colS1 {
+  grid-column: span 1;
+}
   
-.item2-r {
-    grid-column: 2/4;
+.item-colS2 {
+  grid-column: span 2;
 }
 
-.item1-r {
-  grid-column: 1/3;
-}
-
-.item2-l {
+.item-col3-rowS2 {
   grid-column: 3;
-  grid-row: 1/3;
+  grid-row: span 2;
 }
 
-.item2_val-l {
+.item-col3-rowS7 {
   grid-column: 3;
-  grid-row: 1/7;
+  grid-row: span 7;
 }
 
 .item {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-  }
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
 
-  .item:hover{
-    opacity: 50%;
-    transition:all .5s;
-  }
+.item:hover{
+  opacity: 50%;
+  transition:all .5s;
+}
 
 .introText {
     font-family: verdana;
@@ -251,7 +247,7 @@ body {
   .formCont h2{
     margin:1em 0.5em;
     padding-bottom:0.5em;
-    width:4em;
+    font-size:2em;
     color:#78788c;
     border-bottom:3px solid #78788c;
   }
