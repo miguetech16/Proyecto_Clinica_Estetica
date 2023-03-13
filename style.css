@@ -55,39 +55,6 @@ header {
   margin-top: 18px;
 }
 
-.pie-pagina{
-    width: 100%;
-}
-
-.pie-pagina .grupo-1 a img{
-    width: 80px;
-    float: right;
-}
-
-.pie-pagina .grupo-1 .nav_footer ul a li{
-    color: white;
-    list-style: none;
-    font-size: 20px;
-    text-align: left;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 15px;
-}
-
-.pie-pagina .grupo-1 .nav_footer ul a li:hover{
-    color: #ecd8ba;
-}
-
-.pie-pagina .grupo-1{
-    background-color: black;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-.pie-pagina .grupo-1 small{
-    font-size: 15px;
-}
-
 body {
     background-color: #f9f7f2;
   }
@@ -413,3 +380,60 @@ body {
   grid-template-columns: 1fr;
   justify-items: center;
  }
+
+/* Footer */
+
+
+#footer-grid {
+  background-color: #ecd8ba;
+  color: #000000;
+  font-size: 1em;
+  margin: 0;
+  padding: 2em;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 6em;
+}
+
+footer h3{
+  color: #000000;
+}
+
+.footer-opciones ul li h3 {
+  color: #000000;
+  padding: 0.3em;
+  height: 1em;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-opciones ul li a h3:hover {
+  cursor: pointer;
+  color: #a56d1a;
+}
+
+footer ul li a h3{
+  text-align: left;
+}
+
+.copy {
+  text-align: center;
+  background-color: #000;
+  font-size: 1em;
+  padding: 1em;
+  color: #fff;
+  
+}
