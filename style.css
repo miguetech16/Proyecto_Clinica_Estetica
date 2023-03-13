@@ -13,12 +13,13 @@ header {
 .bar_nav {
     margin: 0px;
     background: #eeeae4;
+    text-align: center;
 }
 
 .bar_nav ul {
     margin: 0px;
     padding-right: 0px;
-    text-align: center;
+    display: inline-block;
 }
 
 .bar_nav ul li {
@@ -38,11 +39,20 @@ header {
     background: #ecd8ba;
 }
 
+.user_img {
+  height: 35px;
+  width: 35px;
+  float: right;
+  margin-top: 40px;
+  margin-right: 25px;
+  margin-left: -75px;
+  }
+
 #logo{
-    height: 100px;
-    width: 200px;
-    margin-left: 20px;
-    margin-top: 18px;
+  height: 100px;
+  width: 200px;
+  margin-left: 20px;
+  margin-top: 18px;
 }
 
 .pie-pagina{
@@ -347,4 +357,59 @@ body {
 
  details summary .estrellas {
   margin-left: 0,5em;
- }  
+ }
+ 
+ /* CSS página Inicio de sesión */
+
+ .logIn {
+  width: 23em;
+  margin: 3em;
+  padding: 3em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.logIn form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.logIn input[type="email"],
+.logIn input[type="password"],
+.logIn input[type="text"] 
+{
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.logIn input[type="submit"]{
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.logIn input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.logIn h5 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* Layouts creados */
+
+.layoutCenter {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+ }
