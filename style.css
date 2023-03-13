@@ -344,7 +344,8 @@ body {
 
 .logIn input[type="email"],
 .logIn input[type="password"],
-.logIn input[type="text"] 
+.logIn input[type="text"],
+.logIn input[type="number"]
 {
   font-size: 16px;
   padding: 10px;
