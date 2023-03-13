@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valoraciones</title>
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div w3-include-html="templates/header.html"></div>
-<div w3-include-html="templates/tittleWithImage.html"></div>
-<main>    
-    <div class="grid">
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        <div class="item-colS2" w3-include-html="templates/review.html"></div>
-        
-        <div class="item-col3-rowS7">
-            <form class="formCont">
-                <h2>VALÓRANOS</h2>
-                <p>Nombre:<input placeholder="Escriba su nombre aquí.." required></input></p>
-                <p>Email:<input placeholder="Escriba su email aquí.." required></input></p>
-                <p>Puntuación del servicio:</p><p id="estrella_valoracion">★★★★★</p>
-                <p>Título de la valoración:<input placeholder="Escriba el título de su valoración..."></input></p>
-                <p>Valoración:<textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." required></textarea></input></p>
-                <button class="btn">Enviar</button>
-            </form>
-        </div>
-    </div>
-
-</main>
-
-<div w3-include-html="templates/footer.html"></div>
-
-<script>
-    w3IncludeHTML();
-</script>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Valoraciones</title>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div w3-include-html="templates/header.html"></div>
+        <div w3-include-html="templates/titleWithImage.html"></div>
+        <main>    
+            <div class="grid">
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                <div class="item-colS2" w3-include-html="templates/review.html"></div>
+                
+                <div class="item-col3-rowS7">
+                    <form class="formCont">
+                        <h2>VALÓRANOS</h2>
+                        <p>Nombre:<input placeholder="Escriba su nombre aquí.." required></input></p>
+                        <p>Email:<input placeholder="Escriba su email aquí.." required></input></p>
+                        <p>Puntuación del servicio:</p><p id="estrella_valoracion">★★★★★</p>
+                        <p>Título de la valoración:<input placeholder="Escriba el título de su valoración..."></input></p>
+                        <p>Valoración:<textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." required></textarea></input></p>
+                        <button class="btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <div w3-include-html="templates/footer.html"></div>
+        <script>
+            w3IncludeHTML();
+        </script>
+    </body>
 </html>
