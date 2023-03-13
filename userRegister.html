@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In</title>
+        <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div w3-include-html="templates/header.html"></div>
+        <main>
+            <div class="layoutCenter">
+                <div class="logIn">
+                    <h2>Registrarse</h2>
+                    <form>
+                        <label>Nombre de Usuario:</label>
+                        <input type="text" id="regis_user_name" required>
+                        <label>Correo:</label>
+                        <input type="email" id="regis_email" required>
+                        <label>Contraseña:</label>
+                        <input id="regis_password" type="password" minlength="5" required>
+                        <label>Repetir Contraseña:</label>
+                        <input id="regis_repeat_password" type="password" minlength="5" required>
+                        <input type="submit" value="Registrarse">                        
+                    </form>
+                </div>
+            </div>
+        </main>
+        <div w3-include-html="templates/footer.html"></div>
+    </body>
+    <script>
+        w3IncludeHTML();
+    </script>
+</html>
