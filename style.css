@@ -53,7 +53,7 @@
     height: 35px;
     width: 35px;
     float: right;
-    margin-top: 40px;
+    margin-top: 1em;
     margin-right: 25px;
     margin-left: -75px;
   }
@@ -409,6 +409,10 @@
     background-color: #3e8e41;
   }
 
+  .logIn h2 {
+    font-size: 2em;
+  }
+
   .logIn h5 {
     text-align: center;
     margin-top: 1em;
@@ -455,17 +459,14 @@
     padding-right: 25%;
   }
 
-  .cita {
+  .cita,
+  .logout {
     font-size: 2em;
   }
 
   .cita:hover {
     background: #1c811c;
     color: #fff;
-  }
-
-  .logout {
-    font-size: 2em;
   }
 
   .logout:hover {
@@ -533,19 +534,23 @@
       grid-column: span 1;
     }
 
-    /* Header*/
-    .bar_nav ul li {
-      margin-top: 0em;
-    }
-
+    /* Header and logo */
     #logo {
       height: 3.5em;
       width: auto;
       margin-top: 0.5em;
     }
 
+    /* Title Pages */
     .title {
       display: none;
+    }
+
+    /* Navigation bar */
+    .bar_nav ul li {
+      display: block;
+      font-size: 1.5em;
+      margin-top: 0em;
     }
 
     /* Footer */
@@ -604,10 +609,56 @@
       height: 5em;
     }
 
+    /* Button */
+    .btn {
+      width: 70%;
+      margin-left: 15%;
+      font-size: 1em;
+    }
+
+    /* CSS página Inicio de sesión */
+
+    .logIn {
+      width: 65%;
+      margin: 4em 0.2em 4em 0.2em;
+      padding: 2em;
+    }
+
+    .logIn input[type="email"],
+    .logIn input[type="password"],
+    .logIn input[type="text"],
+    .logIn input[type="number"] {
+      width: 90%;
+    }
+
+    .logIn input[type="submit"] {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 1.5em;
+    }
+
+    .logIn h5 {
+      font-size: 1em;
+    }
+
+    .logIn label {
+      font-size: 1.5em;
+    }
+
+    /* Página Usuario */
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
   }
 
   /* Tablets */
   @media only screen and (min-width: 425px) and (max-width: 768px) {}
-
-  /* Desktops, Large Devices and Wide Screens */
-  @media only screen and (min-width: 768) {}
