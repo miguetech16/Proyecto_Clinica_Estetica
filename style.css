@@ -138,9 +138,12 @@
   .copy {
     text-align: center;
     background-color: #000;
-    font-size: 1em;
     padding: 1em;
     color: #fff;
+  }
+
+  .copy p {
+    font-size: 1em;
   }
 
   /* Body styles*/
@@ -400,16 +403,55 @@
     margin-top: 1em;
   }
 
-/* Layouts creados */
+  /* Página Usuario */
+ .usercard{
+  justify-items: center;
+  text-align: center;
+  background: #aeaeae;
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+  margin-top: 2em;
+  margin-left: 5% ;
+  margin-bottom: 2em;
+}
 
+.usercard img{
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 100%;
+  margin-top: 1em;
+
+}
+
+.usercard .contenido-texto-card-usuario{
+  color: #fff;
+
+}
+
+.usercard .contenido-texto-card-usuario p{
+  color: #fff;
+  margin-bottom: 1em;
+
+}
+
+.usercard .contenido-texto-card-usuario .alergenos{
+  text-align: justify;
+  padding-bottom: 2em;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+  /* Layouts creados */
   .layoutCenter {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
- /*Grid section*/
-
+  /*Grid section*/
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
