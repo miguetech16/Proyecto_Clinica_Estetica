@@ -343,7 +343,7 @@
     background: #eeeae4;
     padding: 1em 1em;
     border-radius: 7px;
-    margin: 2em;
+    margin: 1em;
     font-size: 14px;
     cursor: pointer;
   }
@@ -449,7 +449,6 @@
   .usercard .contenido-texto-card-usuario p {
     color: #fff;
     margin-bottom: 1em;
-
   }
 
   .usercard .contenido-texto-card-usuario .alergenos {
@@ -519,9 +518,176 @@
 
 
   /* Media Queries */
-
   /* Extra Small Devices and Phones */
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 319px) {
+
+    /* Grid */
+    .grid {
+      grid-template-columns: 1fr;
+      margin: 1em;
+    }
+
+    .grid_2col {
+      grid-template-columns: 1fr;
+    }
+
+    .item-colS2,
+    .item-col3-rowS2,
+    .item-col3-rowS7 {
+      grid-column: span 1;
+    }
+
+    /* Header and logo */
+    header {
+      text-align: left;
+    }
+
+    #logo {
+      height: 3.5em;
+      width: auto;
+      margin-top: 0.5em;
+    }
+
+    /* Title Pages */
+    .title {
+      display: none;
+    }
+
+    /* Navigation bar */
+    .bar_nav ul li {
+      display: block;
+      font-size: 1.5em;
+      margin-top: 0em;
+    }
+
+    /* Footer */
+    #footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 1em;
+      gap: 0;
+    }
+
+    .footer-logo img {
+      height: 4em;
+      width: 8em;
+    }
+
+    .footer-opciones ul li h3 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    .cookies {
+      display: none;
+    }
+
+    .copy p {
+      font-size: 0.8em;
+    }
+
+    /* Form CSS */
+    .formCont {
+      margin-left: 0;
+      padding: 0.5em;
+    }
+
+    .formCont h2 {
+      margin: 1em 0.5em;
+      font-size: 1.5em;
+    }
+
+    .formCont p {
+      margin-left: 0.5em;
+    }
+
+    /* Body styles*/
+    h2 {
+      font-size: 1.5em;
+    }
+
+    /* Card */
+    .card {
+      width: 90%;
+    }
+
+    #contactCards {
+      width: 100%;
+    }
+
+    .card img {
+      width: 5em;
+      height: 5em;
+      margin-left: -2em;
+    }
+
+    /* Button */
+    .btn {
+      width: 70%;
+      margin-left: 15%;
+      font-size: 1em;
+    }
+
+    /* CSS página Inicio de sesión */
+
+    .logIn {
+      width: 65%;
+      margin: 4em 0.2em 4em 0.2em;
+      padding: 2em;
+    }
+
+    .logIn input[type="email"],
+    .logIn input[type="password"],
+    .logIn input[type="text"],
+    .logIn input[type="number"] {
+      width: 90%;
+    }
+
+    .logIn input[type="submit"] {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 1em;
+    }
+
+    .logIn h5 {
+      font-size: 1em;
+    }
+
+    .logIn h2 {
+      font-size: 1.75em;
+    }
+
+    .logIn label {
+      font-size: 1em;
+    }
+
+    /* Página Usuario */
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .usercard .contenido-texto-card-usuario p {
+      font-size: 13px;
+      color: #fff;
+      margin-bottom: 1em;
+    }
+
+    .usercard .contenido-texto-card-usuario  h3{
+      font-size: 20px;
+    }
+
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+  }
+
+  /*Small Devices and Phones */
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
 
     /* Grid */
     .grid {
@@ -661,4 +827,9 @@
   }
 
   /* Tablets */
-  @media only screen and (min-width: 425px) and (max-width: 768px) {}
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Grid */
+    .grid {
+      grid-template-columns: 2fr;
+    }
+  }
