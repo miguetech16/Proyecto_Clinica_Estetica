@@ -13,10 +13,6 @@
         <div w3-include-html="templates/titleWithImage.html"></div>
         <main>
             <div class="grid">
-                <div class="item-colS2">
-                    <a href="https://www.google.es/maps/?hl=es" target="_blank"><img class=mapa src="imagenes/mapa.jpg" width="100%";></a>
-                </div>
-
                 <div class="item-col3-rowS2">
                     <form class="formCont">
                         <h2>CONTÁCTANOS</h2>
@@ -41,10 +37,12 @@
                         <button class="btn">Enviar</button>
                     </form>
                 </div>
-
+                <div class="item-colS2">
+                    <a href="https://www.google.es/maps/?hl=es" target="_blank"><img class=mapa src="imagenes/mapa.jpg" width="100%";></a>
+                </div>
                 <div class="item-colS2">
                     <h2>Información de Contacto de la Clínica</h2>
-                    <div class="grid">
+                    <div class="grid" id="contactCards">
                         <div w3-include-html="templates/card.html"></div>
                         <div w3-include-html="templates/card.html"></div>
                         <div w3-include-html="templates/card.html"></div>
