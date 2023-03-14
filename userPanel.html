@@ -4,13 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Log In</title>
+        <title>User Panel</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
             <div w3-include-html="templates/header.html"></div>
             <main>
+                <section class="grid_2col">
+                    <a href="#"><button class="btn cita"><b>Pedir cita</b></button></a>
+                    <a href="#"><button class="btn logout"><b>Logout</b></button></a>
+                </section>
                 <div class="usercard">
                     <img src="imagenes/icono_usuario.png">
                     <div class="contenido-texto-card-usuario">
@@ -36,6 +40,7 @@
                         </p>
                     </div>
                 </div>
+            </main>
             <div w3-include-html="templates/footer.html"></div>
         </div>
     </body>

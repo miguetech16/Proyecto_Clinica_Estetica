@@ -415,34 +415,52 @@
   margin-top: 2em;
   margin-left: 5% ;
   margin-bottom: 2em;
-}
+  }
 
-.usercard img{
-  width: 100px;
-  height: 100px;
-  border: 5px solid rgb(0, 0, 0);
-  border-radius: 100%;
-  margin-top: 1em;
+  .usercard img{
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    margin-top: 1em;
 
-}
+  }
 
-.usercard .contenido-texto-card-usuario{
-  color: #fff;
+  .usercard .contenido-texto-card-usuario{
+    color: #fff;
 
-}
+  }
 
-.usercard .contenido-texto-card-usuario p{
-  color: #fff;
-  margin-bottom: 1em;
+  .usercard .contenido-texto-card-usuario p{
+    color: #fff;
+    margin-bottom: 1em;
 
-}
+  }
 
-.usercard .contenido-texto-card-usuario .alergenos{
-  text-align: justify;
-  padding-bottom: 2em;
-  padding-left: 25%;
-  padding-right: 25%;
-}
+  .usercard .contenido-texto-card-usuario .alergenos{
+    text-align: justify;
+    padding-bottom: 2em;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  .cita {
+    font-size: 2em;
+  }
+
+  .cita:hover{
+    background:#1c811c;
+    color:#fff;
+  }
+
+  .logout{
+    font-size: 2em;
+  }
+
+  .logout:hover{
+    background:#ac1b04;
+    color:#ffffff;
+  }
 
   /* Layouts creados */
   .layoutCenter {
@@ -455,6 +473,14 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin: 2em 2em 2em 2em;
+    grid-auto-flow: row dense;
+  }
+
+  .grid_2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     margin: 2em 2em 2em 2em;
     grid-auto-flow: row dense;
