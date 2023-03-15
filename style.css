@@ -963,10 +963,36 @@
       font-size: 1.5em;
     }
 
-
-
-
   }
 
   /*Small Laptops and Tablets landscape*/
-  @media only screen and (min-width: 769px) and (max-width: 1068px) {}
+  @media only screen and (min-width: 769px) and (max-width: 1068px) {
+
+    /* Grid */
+    #contactCards {
+      grid-template-columns: 1fr;
+    }
+
+    /* Card */
+    #contactCards .card img {
+      margin-left: -17%;
+    }
+
+    #contactCards_h2 {
+      font-size: 1.5em;
+    }
+
+    /* Página Usuario */
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 90%;
+      margin-left: 5%;
+    }
+
+  }
