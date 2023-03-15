@@ -370,7 +370,7 @@
   /* CSS página Inicio de sesión */
 
   .logIn {
-    width: 23em;
+    width: 400px;
     margin: 3em;
     padding: 3em;
     background-color: #fff;
@@ -416,6 +416,11 @@
   .logIn h5 {
     text-align: center;
     margin-top: 1em;
+    font-size: 1em;
+  }
+
+  .logIn label {
+    font-size: 1.5em;
   }
 
   /* Página Usuario */
@@ -824,7 +829,7 @@
 
   }
 
-  /* Tablets */
+  /* Tablets portrait*/
   @media only screen and (min-width: 481px) and (max-width: 768px) {
 
     /* Grid */
@@ -832,7 +837,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .grid-distribution1 {
+    .grid-1col {
       grid-template-columns: 1fr;
       gap: 1em;
     }
@@ -841,6 +846,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
+
+    .item-col3-rowS2,
+    .item-col3-rowS7 {
+      grid-column: span 2;
+    }
+
 
     /* Footer */
     #footer-grid {
@@ -852,6 +863,16 @@
 
     #footer-grid .cookies {
       grid-column: span 2;
+      text-align: center;
+    }
+
+    #footer-grid .cookies p {
+      font-size: 15px;
+    }
+
+    #footer-grid .cookies h3 {
+      font-size: 20px;
+      margin-bottom: 0px;
     }
 
     .footer-opciones ul li h3 {
@@ -865,32 +886,87 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Style Card */
     .card img {
       width: 5em;
       height: 5em;
     }
 
     /* Style distribution  1*/
-    .grid-distribution1 .img-distribution1 img{
+    .grid-1col .img-distribution1 img {
       width: 100%;
       height: auto;
     }
 
-    .grid-distribution1 .img-distribution1{
+    .grid-1col .img-distribution1 {
       text-align: center;
     }
 
-    
-
-    .grid-distribution1 h2{
+    .grid-1col .item-colS2 h2 {
       font-size: 30px;
     }
 
-    .grid-distribution1 p{
+    .grid-1col .item-colS2 p {
       font-size: small;
       margin: 0px;
     }
 
+    /* Style Contact Cards */
+    #contactCards .card {
+      margin-left: 1.5em;
+    }
+
+    /* Style Form */
+    .formCont {
+      margin: 0;
+    }
+
+    /* Página Usuario */
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    /* CSS página Inicio de sesión */
+
+    .logIn {
+      width: 350px;
+      margin: 3em;
+      padding: 3em;
+    }
+
+    .logIn input[type="email"],
+    .logIn input[type="password"],
+    .logIn input[type="text"],
+    .logIn input[type="number"] {
+      width: 90%;
+    }
+
+    .logIn input[type="submit"] {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 1.5em;
+    }
+
+    .logIn h5 {
+      font-size: 1em;
+    }
+
+    .logIn label {
+      font-size: 1.5em;
+    }
+
+
 
 
   }
+
+  /*Small Laptops and Tablets landscape*/
+  @media only screen and (min-width: 769px) and (max-width: 1068px) {}
