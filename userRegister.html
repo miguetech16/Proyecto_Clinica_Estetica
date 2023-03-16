@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sing In</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <script src="formValidationRegister.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -14,20 +15,20 @@
             <div class="layoutCenter">
                 <div class="logIn">
                     <h2>Registrarse</h2>
-                    <form>
+                    <form name="form">
                         <label>Nombre de Usuario:</label>
                         <input type="text" id="regis_user_name" required>
                         <label>Correo:</label>
-                        <input type="email" id="regis_email" required>
+                        <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                         <label>Número de teléfono:</label>
-                        <input type="number" id="regis_phone_number" required>
+                        <input id="tlfn" pattern="[0-9]{9}" required>
                         <label>NIF/DNI:</label>
-                        <input type="number" id="regis_user_dni" required>
+                        <input id="dni" pattern="[0-9]{8}[A-Za-z]"required>
                         <label>Contraseña:</label>
-                        <input id="regis_password" type="password" minlength="5" required>
+                        <input id="passwd1" type="password" minlength="5" required>
                         <label>Repetir Contraseña:</label>
-                        <input id="regis_repeat_password" type="password" minlength="5" required>
-                        <input type="submit" value="Registrarse">                        
+                        <input id="passwd2" type="password" minlength="5" required>
+                        <input type="submit" id="send" value="Registrarse">
                     </form>
                 </div>
             </div>

@@ -383,10 +383,7 @@
     grid-template-columns: 1fr;
   }
 
-  .logIn input[type="email"],
-  .logIn input[type="password"],
-  .logIn input[type="text"],
-  .logIn input[type="number"] {
+  .logIn input {
     font-size: 16px;
     padding: 10px;
     border-radius: 10px;
@@ -639,10 +636,7 @@
       padding: 2em;
     }
 
-    .logIn input[type="email"],
-    .logIn input[type="password"],
-    .logIn input[type="text"],
-    .logIn input[type="number"] {
+    .logIn input {
       width: 90%;
     }
 
@@ -793,10 +787,7 @@
       padding: 2em;
     }
 
-    .logIn input[type="email"],
-    .logIn input[type="password"],
-    .logIn input[type="text"],
-    .logIn input[type="number"] {
+    .logIn input {
       width: 90%;
     }
 
@@ -942,10 +933,7 @@
       padding: 3em;
     }
 
-    .logIn input[type="email"],
-    .logIn input[type="password"],
-    .logIn input[type="text"],
-    .logIn input[type="number"] {
+    .logIn input {
       width: 90%;
     }
 
