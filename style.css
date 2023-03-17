@@ -260,14 +260,14 @@
 
   /* Button */
   .btn {
-    padding: 8px 12px;
     font-family: 'Montserrat', sans-serif;
-    border: 2px solid #78788c;
+    border: 2px solid #78788c !important;
     background: 0;
     cursor: pointer;
     transition: all .5s;
-    width: 50%;
-    margin-left: 25%;
+    width: 50% !important;
+    margin-left: 25% !important;
+    margin-top: 1em;
   }
 
   .btn:hover {
@@ -295,8 +295,7 @@
   }
 
   .formCont input,
-  .formCont textarea,
-  #combo {
+  .formCont textarea {
     width: 100%;
     display: block;
     padding: 1em;
@@ -309,13 +308,11 @@
   }
 
   .formCont input:focus,
-  .formCont textarea:focus,
-  #combo:focus {
+  .formCont textarea:focus {
     border-bottom: 2px solid #78788c;
   }
 
-  .formCont p,
-  #combo {
+  .formCont p {
     display: block;
     margin-left: 1em;
     margin-top: 1em;
@@ -330,13 +327,8 @@
     display: block;
   }
 
-  .formCont #estrella_valoracion {
-    font-size: 25px;
-  }
-
-  #combo {
-    width: 95%;
-    margin-bottom: 1em;
+  .formCont .valora{
+    width: 35%;
   }
 
   /* FAQ CSS */

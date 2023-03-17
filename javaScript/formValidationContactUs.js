@@ -5,19 +5,16 @@ function initiate() {
   form.addEventListener("invalid", validation, true);
   button.addEventListener("click", sendit);
 
-  var user = document.getElementById("regis_user_name");
   var tlfn = document.getElementById("tlfn");
   var email = document.getElementById("email");
-  var dni = document.getElementById("dni");
-  var passwd1 = document.getElementById('passwd1');
-  var passwd2 = document.getElementById('passwd2');
+  var name_contact = document.getElementById("name_contact");
+  var textareaContact = document.getElementById("textareaContact");
 
-  user.addEventListener('input', function () { validateChange('regis_user_name', ''); });
+
+  name_contact.addEventListener('input', function () { validateChange('name_contact', ''); });
   email.addEventListener('input', function () { validateChange('email', 'Ingrese un email válido (nombre@dominio.com)'); });
   tlfn.addEventListener('input', function () { validateChange('tlfn', 'Ingrese un número de teléfono válido (9 dígitos)'); });
-  dni.addEventListener('input', function () { validateChange('dni', 'Ingrese un dni válido (8 dígitos y 1 letra)'); });
-  passwd1.addEventListener('input', function () { validateChange('passwd1', ''); });
-  passwd2.addEventListener('input', function () { validateChange('passwd2', 'Las contraseñas no coinciden'); });
+  textareaContact.addEventListener('input', function () { validateChange('textareaContact', ''); });
 }
 
 function validation(e) {
@@ -26,26 +23,16 @@ function validation(e) {
 }
 
 function sendit() {
-  var user = document.getElementById("regis_user_name");
   var tlfn = document.getElementById("tlfn");
   var email = document.getElementById("email");
-  var dni = document.getElementById("dni");
-  var passwd1 = document.getElementById('passwd1');
-  var passwd2 = document.getElementById('passwd2');
   var valid = form.checkValidity();
 
-  if (valid && passwd1.value === passwd2.value) {
-    sessionStorage.setItem('username', user.value);
-    sessionStorage.setItem('email', email.value);
+  if (valid) {
     form.submit();
   } else if (email.validity.patternMismatch || email.validity.valueMissing) {
     email.setCustomValidity('Ingrese un email válido (nombre@dominio.com)');
   } else if (tlfn.validity.patternMismatch || tlfn.validity.valueMissing) {
     tlfn.setCustomValidity('Ingrese un número de teléfono válido (9 dígitos)');
-  } else if (dni.validity.patternMismatch || dni.validity.valueMissing) {
-    dni.setCustomValidity('Ingrese un dni válido (8 dígitos y 1 letra)');
-  } else {
-    passwd2.setCustomValidity('Las contraseñas no coinciden');
   }
 }
 

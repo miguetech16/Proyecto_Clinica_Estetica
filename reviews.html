@@ -16,12 +16,17 @@
                 <div class="item-col3-rowS7">
                     <form class="formCont">
                         <h2>VALÓRANOS</h2>
-                        <p>Nombre:<input placeholder="Escriba su nombre aquí.." required></input></p>
-                        <p>Email:<input placeholder="Escriba su email aquí.." required></input></p>
-                        <p>Puntuación del servicio:</p><p id="estrella_valoracion">★★★★★</p>
-                        <p>Título de la valoración:<input placeholder="Escriba el título de su valoración..."></input></p>
-                        <p>Valoración:<textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." required></textarea></input></p>
-                        <button class="btn">Enviar</button>
+                        <p>Nombre *</p>
+                        <input placeholder="Escriba su nombre aquí.." required>
+                        <p>Email *</p>
+                        <input type="email" placeholder="Escriba su email aquí.." required>
+                        <p>Puntuación del servicio *</p>
+                        <input type="number" class="valora" id="valoracion" min="0" max="5" placeholder="(0-5)" required>
+                        <p>Título de la valoración</p>
+                        <input placeholder="Escriba el título de su valoración...">
+                        <p>Valoración *</p>
+                        <textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." required></textarea>
+                        <input type="submit" class="btn" id="send" value="Enviar">
                     </form>
                 </div>
                 <div class="item-colS2" w3-include-html="templates/review.html"></div>
