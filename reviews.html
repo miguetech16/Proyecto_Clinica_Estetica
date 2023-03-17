@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Valoraciones</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <script src="javaScript/formValidationReviews.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -14,18 +15,18 @@
         <main>    
             <div class="grid">
                 <div class="item-col3-rowS7">
-                    <form class="formCont">
+                    <form class="formCont" name="form">
                         <h2>VALÓRANOS</h2>
                         <p>Nombre *</p>
-                        <input placeholder="Escriba su nombre aquí.." required>
+                        <input placeholder="Escriba su nombre aquí.." id="name_review" required>
                         <p>Email *</p>
-                        <input type="email" placeholder="Escriba su email aquí.." required>
+                        <input type="email" id="email" placeholder="Escriba su email aquí.." pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required>
                         <p>Puntuación del servicio *</p>
                         <input type="number" class="valora" id="valoracion" min="0" max="5" placeholder="(0-5)" required>
                         <p>Título de la valoración</p>
                         <input placeholder="Escriba el título de su valoración...">
                         <p>Valoración *</p>
-                        <textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." required></textarea>
+                        <textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." id="textareaReviews" required></textarea>
                         <input type="submit" class="btn" id="send" value="Enviar">
                     </form>
                 </div>

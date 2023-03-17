@@ -5,16 +5,16 @@ function initiate() {
   form.addEventListener("invalid", validation, true);
   button.addEventListener("click", sendit);
 
-  var tlfn = document.getElementById("tlfn");
   var email = document.getElementById("email");
-  var name_contact = document.getElementById("name_contact");
-  var textareaContact = document.getElementById("textareaContact");
+  var name_review = document.getElementById("name_review");
+  var num_valoracion = document.getElementById("valoracion");
+  var textareaContact = document.getElementById("textareaReviews");
 
 
-  name_contact.addEventListener('input', function () { validateChange('name_contact', ''); });
+  name_review.addEventListener('input', function () { validateChange('name_review', ''); });
   email.addEventListener('input', function () { validateChange('email', 'Ingrese un email válido (nombre@dominio.com)'); });
-  tlfn.addEventListener('input', function () { validateChange('tlfn', 'Ingrese un número de teléfono válido (9 dígitos)'); });
-  textareaContact.addEventListener('input', function () { validateChange('textareaContact', ''); });
+  num_valoracion.addEventListener('input', function () { validateChange('valoracion', ''); });
+  textareaContact.addEventListener('input', function () { validateChange('textareaReviews', ''); });
 }
 
 function validation(e) {
@@ -23,7 +23,6 @@ function validation(e) {
 }
 
 function sendit() {
-  var tlfn = document.getElementById("tlfn");
   var email = document.getElementById("email");
   var valid = form.checkValidity();
 
@@ -31,8 +30,6 @@ function sendit() {
     form.submit();
   } else if (email.validity.patternMismatch || email.validity.valueMissing) {
     email.setCustomValidity('Ingrese un email válido (nombre@dominio.com)');
-  } else if (tlfn.validity.patternMismatch || tlfn.validity.valueMissing) {
-    tlfn.setCustomValidity('Ingrese un número de teléfono válido (9 dígitos)');
   }
 }
 
