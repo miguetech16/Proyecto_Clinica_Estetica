@@ -1,0 +1,59 @@
+{
+    "header": [
+        {
+            "titulo-pag": "FAQ",
+            "imagen": ""
+        }
+    ],
+    "faqs": [
+      {
+        "pregunta": "¿Cuáles son los tipos de tratamientos que ofrecen?",
+        "respuesta": "Ofrecemos una amplia variedad de tratamientos estéticos médicos, incluyendo inyecciones faciales, procedimientos corporales no invasivos, eliminación de vello láser, tratamientos de rejuvenecimiento de la piel y más. Nuestro equipo de profesionales altamente capacitados trabajará contigo para determinar cuál es el tratamiento adecuado para tus necesidades y objetivos individuales de belleza."
+      },
+      {
+        "pregunta": "¿Es doloroso el tratamiento?",
+        "respuesta": "La mayoría de nuestros tratamientos son cómodos y no invasivos, aunque algunos pueden causar un poco de incomodidad o dolor. Si tienes preocupaciones acerca del dolor o la incomodidad, nuestros profesionales médicos estarán encantados de hablar contigo y ofrecerte opciones para minimizar el dolor."
+      },
+      {
+        "pregunta": "¿Cuánto tiempo dura el tiempo de recuperación después de un tratamiento?",
+        "respuesta": "El tiempo de recuperación varía según el tipo de tratamiento. Algunos de nuestros tratamientos no invasivos no tienen tiempo de recuperación, mientras que otros pueden requerir un tiempo de descanso de varios días. Nuestros profesionales médicos estarán encantados de discutir los detalles de tu tratamiento y el tiempo de recuperación necesario durante tu consulta."
+      },
+      {
+        "pregunta": "¿Cuántas sesiones necesito para ver los resultados?",
+        "respuesta": "El número de sesiones requeridas para ver resultados varía según el tipo de tratamiento y la persona. Durante tu consulta, nuestros profesionales médicos podrán darte una idea de cuántas sesiones podrías necesitar para ver resultados notables."
+      },
+      {
+        "pregunta": "¿Qué tipo de resultados puedo esperar?",
+        "respuesta": "El tipo de resultados que puedes esperar varía según el tratamiento que elijas. Nuestros profesionales médicos estarán encantados de discutir los detalles de tus objetivos de belleza y el tipo de resultados que puedes esperar durante tu consulta."
+      },
+      {
+        "pregunta": "¿Cuánto tiempo duran los resultados?",
+        "respuesta": "La duración de los resultados varía según el tratamiento que elijas y tu cuerpo. Muchos de nuestros tratamientos ofrecen resultados duraderos, aunque es posible que necesites sesiones adicionales para mantener tus resultados a largo plazo. Nuestros profesionales médicos estarán encantados de discutir los detalles de la duración de los resultados durante tu consulta."
+      },
+      {
+        "pregunta": "¿Hay algún requisito previo para hacerme un tratamiento de estética médica?",
+        "respuesta": "Antes de hacerte cualquier tratamiento, nuestros profesionales médicos te realizarán una evaluación médica para asegurarse de que eres un buen candidato para el tratamiento. Si tienes alguna condición de salud preexistente o estás tomando medicamentos, asegúrate de informar a nuestro personal médico durante tu consulta."
+      },
+      {
+        "pregunta": "¿Cuáles son los riesgos asociados con los tratamientos de estética médica?",
+        "respuesta": "Cada tratamiento tiene sus propios riesgos y efectos secundarios potenciales, aunque la mayoría de nuestros tratamientos son seguros y efectivos cuando se realizan por profesionales médicos calificados. Durante tu consulta, nuestros profesionales médicos te informarán sobre los riesgos y los efectos secundarios potenciales de cualquier tratamiento que estés considerando."
+      },
+      {
+        "pregunta": "¿Hay alguna forma de financiamiento disponible para los tratamientos de estética médica?",
+        "respuesta": "Ofrecemos varias opciones de financiamiento para ayudarte a pagar por tus tratamientos de estética médica, incluyendo planes de pago a plazos y opciones de financiamiento sin intereses. Habla con nuestro personal durante tu consulta para obtener más información sobre las opciones de financiamiento disponibles."
+      },
+      {
+        "pregunta": "¿Cuál es la edad mínima para hacerse un tratamiento de estética médica?",
+        "respuesta": "La edad mínima para hacerse un tratamiento de estética médica varía según el tratamiento. En general, requerimos que los pacientes tengan al menos 18 años para hacerse un tratamiento. Si tienes preguntas sobre la edad mínima para un tratamiento específico, nuestros profesionales médicos estarán encantados de discutir los detalles contigo durante tu consulta."
+      },
+      {
+        "pregunta": "¿Puedo hacer ejercicio después de mi tratamiento?",
+        "respuesta": "Depende del tratamiento que hayas recibido. Algunos tratamientos requieren un período de recuperación durante el cual se recomienda no hacer ejercicio u otras actividades vigorosas. Nuestros profesionales médicos te informarán sobre cualquier recomendación de recuperación específica que debas seguir después de tu tratamiento."
+      },
+      {
+        "pregunta": "¿Cuánto tiempo dura una consulta de tratamiento?",
+        "respuesta": "El tiempo de consulta varía según el tipo de tratamiento que estés considerando. En general, las consultas duran de 30 minutos a una hora. Durante tu consulta, nuestros profesionales médicos discutirán tus objetivos de belleza y te informarán sobre las opciones de tratamiento que están disponibles para ti."
+      }
+    ]
+  }
+  
