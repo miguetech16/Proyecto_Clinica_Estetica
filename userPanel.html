@@ -6,14 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>User Panel</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <script src="javaScript/functionButtonsUserPanel.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
             <div w3-include-html="templates/header.html"></div>
             <main>
                 <section class="grid_2col">
-                    <a href="#"><button class="btn cita"><b>Pedir cita</b></button></a>
-                    <a href="#"><button class="btn logout"><b>Logout</b></button></a>
+                    <button class="btn cita" onclick="pedirCita()"><b>Pedir cita</b></button>
+                    <button class="btn logout" onclick="logout()"><b>Logout</b></button>
                 </section>
                 <div class="usercard">
                     <img src="imagenes/icono_usuario.png">

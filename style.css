@@ -401,6 +401,7 @@
     cursor: pointer;
     width: 50%;
     margin-left: 25%;
+    margin-bottom: 0px;
   }
 
   .logIn input[type="submit"]:hover {
