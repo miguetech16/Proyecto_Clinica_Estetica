@@ -18,9 +18,12 @@
       <div class="item-col3-rowS2">
         <form class="formCont" name="form">
           <h2>CONTÁCTANOS</h2>
-          <p>Nombre:<input placeholder="Escriba su nombre aquí.." required></input></p>
-          <p>Email:<input type="email" id="email" placeholder="Escriba su email aquí.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></input></p>
-          <p>Teléfono:<input id="tlfn" placeholder="Escriba su teléfono de contacto aquí.." pattern="[0-9]{9}" required></input></p>
+          <p>Nombre *</p>
+          <input placeholder="Escriba su nombre aquí.." required></input>
+          <p>Email *</p>
+          <input type="email" id="email" placeholder="Escriba su email aquí.." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></input>
+          <p>Teléfono *</p>
+          <input id="tlfn" placeholder="Escriba su teléfono de contacto aquí.." pattern="[0-9]{9}" required></input>
           <p>Tratamiento:</p>
           <select name="combo" id="combo">
             <optgroup label="Tipo 1">
@@ -34,8 +37,10 @@
               <option value="TratamientoX">Tratamiento X</option>
             </optgroup>
           </select>
-          <p>Asunto:<input placeholder="Asunto de su consulta..."></input></p>
-          <p>Mensaje:<textarea placeholder="Contenido de su consulta..." required></textarea></input></p>
+          <p>Asunto</p>
+          <input placeholder="Asunto de su consulta..."></input>
+          <p>Mensaje *</p>
+          <textarea placeholder="Contenido de su consulta..." required></textarea>
           <button class="btn" id="send">Enviar</button>
         </form>
       </div>
