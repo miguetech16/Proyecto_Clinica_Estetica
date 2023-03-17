@@ -1,13 +1,13 @@
 var form;
 function initiate() {
-  var button = document.getElementById("send");
+  var button = document.getElementById("send_logIn");
   form = document.querySelector("form[name='form']");
   form.addEventListener("invalid", validation, true);
   button.addEventListener("click", sendit);
 
-  var email = document.getElementById("email");
+  var email = document.getElementById("email_logIn");
 
-  email.addEventListener('input', function () { validateChange('email', 'Ingrese un email válido (nombre@dominio.com)'); });
+  email.addEventListener('input', function () { validateChange('email_logIn', 'Ingrese un email válido (nombre@dominio.com)'); });
 }
 
 function validation(e) {
@@ -17,8 +17,8 @@ function validation(e) {
 
 function sendit() {
 
-  var email = document.getElementById("email");
-  var password = document.getElementById("password");
+  var email = document.getElementById("email_logIn");
+  var password = document.getElementById("password_logIn");
   var valid = form.checkValidity();
 
   if (valid) {
@@ -37,8 +37,8 @@ function existUser(correo, contraseña) {
 
       usuarios.forEach(usuario => {
         if (usuario.email === correo && usuario.contraseña === contraseña) {
-          sessionStorage.setItem('email', correo);
-          sessionStorage.setItem('password', contraseña);
+          sessionStorage.setItem('email_logIn', correo);
+          sessionStorage.setItem('password_logIn', contraseña);
           aparece = true;
         }
       });

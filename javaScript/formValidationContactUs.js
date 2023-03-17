@@ -1,19 +1,19 @@
 var form;
 function initiate() {
-  var button = document.getElementById("send");
+  var button = document.getElementById("send_contact");
   form = document.querySelector("form[name='form']");
   form.addEventListener("invalid", validation, true);
   button.addEventListener("click", sendit);
 
-  var tlfn = document.getElementById("tlfn");
-  var email = document.getElementById("email");
+  var tlfn = document.getElementById("tlfn_contact");
+  var email = document.getElementById("email_contact");
   var name_contact = document.getElementById("name_contact");
   var textareaContact = document.getElementById("textareaContact");
 
 
   name_contact.addEventListener('input', function () { validateChange('name_contact', ''); });
-  email.addEventListener('input', function () { validateChange('email', 'Ingrese un email válido (nombre@dominio.com)'); });
-  tlfn.addEventListener('input', function () { validateChange('tlfn', 'Ingrese un número de teléfono válido (9 dígitos)'); });
+  email.addEventListener('input', function () { validateChange('email_contact', 'Ingrese un email válido (nombre@dominio.com)'); });
+  tlfn.addEventListener('input', function () { validateChange('tlfn_contact', 'Ingrese un número de teléfono válido (9 dígitos)'); });
   textareaContact.addEventListener('input', function () { validateChange('textareaContact', ''); });
 }
 
@@ -23,8 +23,8 @@ function validation(e) {
 }
 
 function sendit() {
-  var tlfn = document.getElementById("tlfn");
-  var email = document.getElementById("email");
+  var tlfn = document.getElementById("tlfn_contact");
+  var email = document.getElementById("email_contact");
   var valid = form.checkValidity();
 
   if (valid) {

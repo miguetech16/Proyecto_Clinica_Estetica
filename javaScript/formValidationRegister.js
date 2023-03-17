@@ -1,20 +1,20 @@
 var form;
 function initiate() {
-  var button = document.getElementById("send");
+  var button = document.getElementById("send_register");
   form = document.querySelector("form[name='form']");
   form.addEventListener("invalid", validation, true);
   button.addEventListener("click", sendit);
 
   var user = document.getElementById("regis_user_name");
-  var tlfn = document.getElementById("tlfn");
-  var email = document.getElementById("email");
+  var tlfn = document.getElementById("tlfn_register");
+  var email = document.getElementById("email_register");
   var dni = document.getElementById("dni");
   var passwd1 = document.getElementById('passwd1');
   var passwd2 = document.getElementById('passwd2');
 
   user.addEventListener('input', function () { validateChange('regis_user_name', ''); });
-  email.addEventListener('input', function () { validateChange('email', 'Ingrese un email válido (nombre@dominio.com)'); });
-  tlfn.addEventListener('input', function () { validateChange('tlfn', 'Ingrese un número de teléfono válido (9 dígitos)'); });
+  email.addEventListener('input', function () { validateChange('email_register', 'Ingrese un email válido (nombre@dominio.com)'); });
+  tlfn.addEventListener('input', function () { validateChange('tlfn_register', 'Ingrese un número de teléfono válido (9 dígitos)'); });
   dni.addEventListener('input', function () { validateChange('dni', 'Ingrese un dni válido (8 dígitos y 1 letra)'); });
   passwd1.addEventListener('input', function () { validateChange('passwd1', ''); });
   passwd2.addEventListener('input', function () { validateChange('passwd2', 'Las contraseñas no coinciden'); });
@@ -27,8 +27,8 @@ function validation(e) {
 
 function sendit() {
   var user = document.getElementById("regis_user_name");
-  var tlfn = document.getElementById("tlfn");
-  var email = document.getElementById("email");
+  var tlfn = document.getElementById("tlfn_register");
+  var email = document.getElementById("email_register");
   var dni = document.getElementById("dni");
   var passwd1 = document.getElementById('passwd1');
   var passwd2 = document.getElementById('passwd2');
@@ -36,7 +36,7 @@ function sendit() {
 
   if (valid && passwd1.value === passwd2.value) {
     sessionStorage.setItem('username', user.value);
-    sessionStorage.setItem('email', email.value);
+    sessionStorage.setItem('email_register', email.value);
     form.submit();
   } else if (email.validity.patternMismatch || email.validity.valueMissing) {
     email.setCustomValidity('Ingrese un email válido (nombre@dominio.com)');
