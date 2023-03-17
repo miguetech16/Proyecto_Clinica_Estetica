@@ -1,0 +1,28 @@
+{
+    "promociones": [
+      {
+        "titulo": "Paquete facial de rejuvenecimiento - 20% de descuento",
+        "descripcion": "¡Luce una piel más joven y radiante con nuestro paquete facial de rejuvenecimiento! Incluye un tratamiento de limpieza facial profunda, microdermoabrasión y aplicación de un serum rejuvenecedor. ¡Solo por tiempo limitado obtén un 20% de descuento en el precio regular!"
+      },
+      {
+        "titulo": "Tratamiento de Botox - 15% de descuento en tu primera sesión",
+        "descripcion": "¿Quieres suavizar las líneas de expresión en tu rostro? ¡Prueba nuestro tratamiento de Botox! Con resultados duraderos y efectivos, este tratamiento se realiza en minutos y no requiere tiempo de inactividad. ¡Aprovecha nuestra oferta especial y obtén un 15% de descuento en tu primera sesión!"
+      },
+      {
+        "titulo": "Tratamiento de Mesoterapia - 10% de descuento en tu primera sesión",
+        "descripcion": "Disfruta de un 10% de descuento en tu primera sesión de Mesoterapia"
+     },
+     {
+        "titulo": "25% de descuento en Tratamiento de Plasma Rico en Plaquetas",
+        "descripcion": "¡Aprovecha esta oportunidad única! Obtén un 25% de descuento en el innovador Tratamiento de Plasma Rico en Plaquetas, que te ayudará a rejuvenecer y revitalizar tu piel de manera natural. Este tratamiento utiliza las propias células de tu cuerpo para estimular la producción de colágeno y elastina, mejorando la textura y apariencia de tu piel. ¡No pierdas la oportunidad de lucir radiante!"
+      },
+      {
+        "titulo": "Sesión de tratamiento facial gratis",
+        "descripcion": "Con la compra de cualquier tratamiento corporal, obtén una sesión de tratamiento facial gratis. ¡Dale a tu piel el cuidado que merece!"
+      },
+      {
+        "titulo": "Promoción Láser: una sesión gratis cada 6",
+        "descripcion": "Consigue una sesión gratis de tratamiento de láser cada 6 sesiones pagadas. ¡Aprovecha esta oferta para obtener una piel radiante y suave!"
+      }
+    ]
+  }

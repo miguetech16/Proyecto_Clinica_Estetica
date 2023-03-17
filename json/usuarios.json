@@ -1,39 +1,39 @@
 {
-    "usuarios": [
-      {
-        "username": "laura23",
-        "email": "laura23@example.com",
-        "telefono": "611234567",
-        "dni": "12345678A",
-        "contraseña": "p4ssw0rd"
-      },
-      {
-        "username": "javier87",
-        "email": "javier87@example.com",
-        "telefono": "622345678",
-        "dni": "23456789B",
-        "contraseña": "S3cr3tP4ss"
-      },
-      {
-        "username": "sofia32",
-        "email": "sofia32@example.com",
-        "telefono": "633456789",
-        "dni": "34567890C",
-        "contraseña": "MyP4ssw0rd"
-      },
-      {
-        "username": "carlos41",
-        "email": "carlos41@example.com",
-        "telefono": "644567890",
-        "dni": "45678901D",
-        "contraseña": "SafeP4ss"
-      },
-      {
-        "username": "ana56",
-        "email": "ana56@example.com",
-        "telefono": "655678901",
-        "dni": "56789012E",
-        "contraseña": "p4ssw0rd123"
-      }
-    ]
+  "usuarios": [
+    {
+      "username": "laura23",
+      "email": "laura23@example.com",
+      "telefono": "611234567",
+      "dni": "12345678A",
+      "contraseña": "p4ssw0rd"
+    },
+    {
+      "username": "javier87",
+      "email": "javier87@example.com",
+      "telefono": "622345678",
+      "dni": "23456789B",
+      "contraseña": "S3cr3tP4ss"
+    },
+    {
+      "username": "sofia32",
+      "email": "sofia32@example.com",
+      "telefono": "633456789",
+      "dni": "34567890C",
+      "contraseña": "MyP4ssw0rd"
+    },
+    {
+      "username": "carlos41",
+      "email": "carlos41@example.com",
+      "telefono": "644567890",
+      "dni": "45678901D",
+      "contraseña": "SafeP4ss"
+    },
+    {
+      "username": "ana56",
+      "email": "ana56@example.com",
+      "telefono": "655678901",
+      "dni": "56789012E",
+      "contraseña": "p4ssw0rd123"
+    }
+  ]
 }

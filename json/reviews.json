@@ -1,0 +1,34 @@
+{
+    "valoraciones": [
+        {
+            "titulo": "Excelente atención",
+            "valoracion": 5,
+            "resena": "La clínica cuenta con un personal muy profesional y atento. Me sentí muy cómoda durante todo el procedimiento y el resultado final fue espectacular."
+        },
+        {
+            "titulo": "Muy recomendable",
+            "valoracion": 4,
+            "resena": "El tratamiento fue muy efectivo y los resultados se notaron desde la primera sesión. El único inconveniente fue el costo, pero en general, fue una buena inversión."
+        },
+        {
+            "título": "Resultados sorprendentes",
+            "valoración": 4,
+            "reseña": "Mi experiencia en esta clínica de estética médica fue excelente. Me sometí a un tratamiento de microdermoabrasión y los resultados fueron sorprendentes. El personal fue muy profesional y amable. Definitivamente recomiendo esta clínica."
+        },
+        {
+            "título": "Trato excepcional",
+            "valoración": 5,
+            "reseña": "El personal de esta clínica de estética es excepcional. Me hicieron sentir muy cómoda y relajada durante mi tratamiento de masaje facial. Definitivamente regresaré para probar otros tratamientos en el futuro."
+        },
+        {
+            "titulo": "Buen servicio, pero podría mejorar",
+            "valoracion": 3,
+            "resena": "Fui a esta clínica para hacerme un tratamiento facial y aunque el servicio fue bueno, no quedé completamente satisfecha con los resultados. Creo que podrían mejorar en algunas cosas, como el tiempo de espera y la atención al cliente. Sin embargo, el personal fue amable y profesional en todo momento."
+        },
+        {
+            "titulo": "Muy contenta con los resultados",
+            "valoracion": 5,
+            "resena": "Me realicé un tratamiento de rejuvenecimiento facial y estoy muy contenta con los resultados. La clínica cuenta con la última tecnología en estética y el personal es muy profesional y amable. La única sugerencia que tengo es que podrían mejorar un poco el tiempo de espera antes de ser atendido. Pero en general, lo recomiendo mucho."
+        }
+    ]
+}
