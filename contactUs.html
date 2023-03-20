@@ -7,11 +7,12 @@
     <title>ContactUs</title>
     <script src="http://www.w3schools.com/lib/w3data.js"></script>
     <script src="javaScript/formValidationContactUs.js"></script>
+    <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div w3-include-html="templates/header.html"></div>
-    <div w3-include-html="templates/titleWithImage.html"></div>
+    <div id="header"></div>
+    <div id="title_page"></div>
     <main>
       <div class="grid">
         <section class="item-col3-rowS2">
@@ -43,7 +44,7 @@
         </section>
       </div>
     </main>
-    <footer w3-include-html="templates/footer.html"></footer>
+    <div id="footer"></div>
   </body>
   <script>
     w3IncludeHTML();  

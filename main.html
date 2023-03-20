@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
+        <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="header" w3-include-html="templates/header.html"></div>
-        <div w3-include-html="templates/titleWithImage.html"></div>
+        <div id="header"></div>
+        <div id="title_page"></div>
         <main>
             <section w3-include-html="templates/distribucion1.html"></section>
             <section class="grid">
@@ -35,7 +36,7 @@
             </section>
         </main>
 
-        <footer w3-include-html="templates/footer.html"></footer>
+        <div id="footer"></div>
     </body>
     <script>
         w3IncludeHTML();

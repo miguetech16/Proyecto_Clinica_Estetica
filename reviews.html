@@ -7,12 +7,13 @@
         <title>Valoraciones</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
         <script src="javaScript/formValidationReviews.js"></script>
+        <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div w3-include-html="templates/header.html"></div>
-        <div w3-include-html="templates/titleWithImage.html"></div>
-        <main>    
+        <div id="header"></div>
+        <div id="title_page"></div>
+        <main>
             <div class="grid">
                 <section class="item-col3-rowS7">
                     <form class="formCont" name="form">
@@ -39,7 +40,7 @@
                 <article class="item-colS2" w3-include-html="templates/review.html"></article>
             </div>
         </main>
-        <footer w3-include-html="templates/footer.html"></footer>
+        <div id="footer"></div>
         <script>
             w3IncludeHTML();
         </script>
