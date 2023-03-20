@@ -193,7 +193,7 @@
 
   .introText {
     font-family: verdana;
-    font-size: 15px;
+    font-size: 1vw;
     margin-left: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
@@ -599,6 +599,10 @@
     h2 {
       font-size: 1.5em;
     }
+    
+    .introText {
+      font-size: 0.7em;
+    }
 
     /* Card */
     .card {
@@ -750,6 +754,10 @@
     /* Body styles*/
     h2 {
       font-size: 1.5em;
+    }
+
+    .introText {
+      font-size: 0.8em;
     }
 
     /* Card */

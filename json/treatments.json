@@ -1,10 +1,4 @@
 {
-    "header": [
-        {
-            "titulo-pag": "Tratamientos",
-            "imagen": ""
-        }
-    ],
     "tratamientos": [
         {
             "nombre": "Tratamiento de Botox",

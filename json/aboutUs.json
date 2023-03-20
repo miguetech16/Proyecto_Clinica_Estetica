@@ -1,10 +1,4 @@
 {
-    "header": [
-        {
-            "titulo-pag": "Nosotros",
-            "imagen": ""
-        }
-    ],
     "medicos": [
         {
             "nombre": "Dr. Miguel Sánchez",
@@ -12,18 +6,18 @@
             "trayectoria": "El Dr. Miguel Sánchez es un reconocido especialista en estética médica con más de 15 años de experiencia en el campo. Ha trabajado en varias clínicas de renombre y ha sido reconocido por su labor en el desarrollo de nuevas técnicas y tratamientos para la mejora de la apariencia y la salud de la piel."
         },
         {
-            "nombre": "Dra. Laura Torres",
+            "nombre": "Dra. Laura Gómez",
             "imagen": "imagenes/medico2.jpg",
-            "trayectoria": "La Dra. Laura Torres es especialista en dermatología y estética médica, con más de 10 años de experiencia en el cuidado de la piel y el cuerpo. Ha trabajado en varias clínicas y ha sido reconocida por su labor en el tratamiento de problemas de piel como el acné y la rosácea, así como en la aplicación de tratamientos de rejuvenecimiento facial."
+            "trayectoria": "La Dra. Laura Gómez es especialista en dermatología y estética médica, con más de 10 años de experiencia en el cuidado de la piel y el cuerpo. Ha trabajado en varias clínicas y ha sido reconocida por su labor en el tratamiento de problemas de piel como el acné y la rosácea, así como en la aplicación de tratamientos de rejuvenecimiento facial."
         },
         {
             "nombre": "Dr. Raúl González",
-            "imagen": "imagenes/medico3.jpg",
+            "imagen": "imagenes/medico4.jpg",
             "trayectoria": "El Dr. Raúl González es un experto en cirugía estética y reconstructiva, con más de 20 años de experiencia en el campo. Ha trabajado en varios hospitales y clínicas y ha sido reconocido por su labor en el desarrollo de técnicas innovadoras para la cirugía de reconstrucción mamaria y facial."
         },
         {
             "nombre": "Dra. Alba Jiménez",
-            "imagen": "imagenes/medico4.jpg",
+            "imagen": "imagenes/medico3.jpg",
             "trayectoria": "La Dra. Alba Jiménez es especialista en medicina estética, con más de 15 años de experiencia en el campo. Ha trabajado en varias clínicas y ha sido reconocida por su labor en el desarrollo de tratamientos de rejuvenecimiento facial y corporal, así como en la aplicación de técnicas de liposucción y remodelación corporal no invasivas."
         }
     ]

@@ -1,10 +1,4 @@
 {
-  "header": [
-    {
-      "titulo-pag": "FAQ",
-      "imagen": ""
-    }
-  ],
   "faqs": [
     {
       "pregunta": "¿Cuáles son los tipos de tratamientos que ofrecen?",
