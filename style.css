@@ -833,10 +833,10 @@
     }
 
     .item-col3-rowS2,
-    .item-col3-rowS7 {
+    .item-col3-rowS7,
+    .span2_tablet {
       grid-column: span 2;
     }
-
 
     /* Footer */
     #footer-grid {

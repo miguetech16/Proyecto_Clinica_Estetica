@@ -7,33 +7,15 @@
         <title>Home</title>
         <script src="http://www.w3schools.com/lib/w3data.js"></script>
         <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
+        <script src="javaScript_Dynamic/DynamicLoad_Main.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="header"></div>
+        <div id="header"></div> 
         <div id="title_page"></div>
         <main>
-            <section w3-include-html="templates/distribucion1.html"></section>
-            <section class="grid">
-                <article class="item span2_tablet">
-                    <a href="treatment.html">
-                        <img src="imagenes/img1.jpg" width="100%" height="100%">
-                        <div class="txtCentrado">Tratamiento Destacado</div>
-                    </a>
-                </article>
-                <article class="item">
-                    <a href="contactUs.html">
-                        <img src="imagenes/img1.jpg" width="100%" height="100%">
-                        <div class="txtCentrado">Pida Cita</div>
-                    </a>
-                </article>
-                <article class="item">
-                    <a href="promotions.html">
-                        <img src="imagenes/img1.jpg" width="100%" height="100%">
-                        <div class="txtCentrado">Promociones</div>
-                    </a>
-                </article>
-            </section>
+            <section id="dist1"></section>
+            <section class="grid" id="dist2"></section>
         </main>
 
         <div id="footer"></div>
