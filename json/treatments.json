@@ -1,102 +1,111 @@
 {
     "header": [
         {
-            "titulo-pag": "Clínicas LMR",
+            "titulo-pag": "Tratamientos",
             "imagen": ""
         }
     ],
     "tratamientos": [
         {
             "nombre": "Tratamiento de Botox",
-            "imagen": "https://ejemplo.com/botox.jpg",
+            "imagen": "imagenes/Tratamiento_botox.jpg",
             "descripcion": "Este tratamiento es utilizado para reducir las arrugas y líneas de expresión en el rostro. Se aplica mediante inyecciones de botox en las zonas deseadas.",
             "alergenos": "No se recomienda para personas alérgicas a la proteína del huevo.",
             "productos_usados": [
                 "Botox"
             ],
-            "duracion": "30 minutos"
+            "duracion": "30 minutos",
+            "sesiones": "2 Sesiones"
         },
         {
             "nombre": "Peeling Químico",
-            "imagen": "https://ejemplo.com/peeling.jpg",
+            "imagen": "imagenes/Peeling_químico.jpg",
             "descripcion": "Este tratamiento se utiliza para mejorar la apariencia de la piel, eliminando manchas, cicatrices y arrugas. Se aplica una solución química en la piel para eliminar las capas superficiales.",
             "alergenos": "No se recomienda para personas con piel sensible o alérgicas a los productos químicos.",
             "productos_usados": [
                 "Ácido glicólico",
                 "Ácido salicílico"
             ],
-            "duracion": "60 minutos"
+            "duracion": "60 minutos",
+            "sesiones": "4 Sesiones"
         },
         {
             "nombre": "Tratamiento de Microdermoabrasión",
-            "imagen": "https://ejemplo.com/microdermoabrasion.jpg",
+            "imagen": "imagenes/Trtamiento_microdermoabrasión.jpg",
             "descripcion": "Este tratamiento consiste en una exfoliación profunda de la piel mediante una máquina de microdermoabrasión. Se utiliza para mejorar la textura de la piel y reducir la apariencia de manchas y cicatrices.",
             "alergenos": "No se recomienda para personas con piel sensible o alérgicas a los productos químicos.",
             "productos_usados": [
                 "Máquina de microdermoabrasión"
             ],
-            "duracion": "45 minutos"
+            "duracion": "45 minutos",
+            "sesiones": "1 Sesión"
         },
         {
             "nombre": "Tratamiento de Ácido Hialurónico",
-            "imagen": "https://ejemplo.com/acido-hialuronico.jpg",
+            "imagen": "imagenes/Tratamiento_ácido_hialurónico.jpg",
             "descripcion": "Este tratamiento se utiliza para hidratar y rellenar la piel. Se aplica mediante inyecciones de ácido hialurónico en las zonas deseadas.",
             "alergenos": "No se recomienda para personas alérgicas al ácido hialurónico o a la lidocaína.",
             "productos_usados": [
                 "Ácido hialurónico",
                 "Lidocaína"
             ],
-            "duracion": "60 minutos"
+            "duracion": "60 minutos",
+            "sesiones": "3 Sesiones"
         },
         {
             "nombre": "Tratamiento de Radiofrecuencia",
-            "imagen": "https://ejemplo.com/radiofrecuencia.jpg",
+            "imagen": "imagenes/Tratamiento_radiofrecuencia.jpg",
             "descripcion": "Este tratamiento se utiliza para mejorar la apariencia de la piel mediante la estimulación de colágeno. Se aplica mediante un aparato de radiofrecuencia en la piel.",
             "alergenos": "No se recomienda para personas con marcapasos o problemas cardíacos.",
             "productos_usados": [
                 "Aparato de radiofrecuencia"
             ],
-            "duracion": "60 minutos"
+            "duracion": "60 minutos",
+            "sesiones": "1 Sesión"
         },
         {
             "nombre": "Tratamiento de Carboxiterapia",
-            "imagen": "https://ejemplo.com/carboxiterapia.jpg",
+            "imagen": "imagenes/Tratamiento_carboxiterapia.jpg",
             "descripcion": "Este tratamiento se utiliza para mejorar la apariencia de la piel y reducir laapariencia de celulitis y estrías. Se aplica mediante inyecciones de dióxido de carbono en las zonas deseadas.",
             "alergenos": "No se recomienda para personas con problemas respiratorios o alérgicas al dióxido de carbono.",
             "productos_usados": [
                 "Dióxido de carbono"
             ],
-            "duracion": "45 minutos"
+            "duracion": "45 minutos",
+            "sesiones": "5 Sesiones"
         },
         {
             "nombre": "Tratamiento de Mesoterapia",
-            "imagen": "https://ejemplo.com/mesoterapia.jpg",
+            "imagen": "imagenes/Tratamiento_mesoterapia.jpg",
             "descripcion": "Este tratamiento se utiliza para reducir la apariencia de la celulitis y mejorar la apariencia de la piel. Se aplica mediante inyecciones de una solución de vitaminas, minerales y otros nutrientes en las zonas deseadas.",
             "alergenos": "No se recomienda para personas alérgicas a los ingredientes de la solución.",
             "productos_usados": [
                 "Solución de vitaminas, minerales y nutrientes"
             ],
-            "duracion": "60 minutos"
+            "duracion": "60 minutos",
+            "sesiones": "1 Sesión"
         },
         {
             "nombre": "Tratamiento de Plasma Rico en Plaquetas",
-            "imagen": "https://ejemplo.com/plasma-rico-en-plaquetas.jpg",
+            "imagen": "imagenes/Tratamiento_plasma_plaquetas.jpg",
             "descripcion": "Este tratamiento se utiliza para mejorar la apariencia de la piel mediante la estimulación de colágeno. Se aplica mediante inyecciones de plasma rico en plaquetas en las zonas deseadas.",
             "alergenos": "No se recomienda para personas alérgicas a los componentes de la sangre.",
             "productos_usados": [
                 "Plasma rico en plaquetas"
             ],
-            "duracion": "60 minutos"
+            "duracion": "60 minutos",
+            "sesiones": "4 Sesiones"
         },
         {
             "nombre": "Tratamiento de Láser",
-            "imagen": "https://ejemplo.com/laser.jpg",
+            "imagen": "imagenes/Tratamiento_láser.jpg",
             "descripcion": "Este tratamiento se utiliza para eliminar manchas y cicatrices en la piel. Se aplica mediante un aparato de láser en la piel.",
             "alergenos": "No se recomienda para personas con piel sensible o con problemas de cicatrización.",
             "productos_usados": [
                 "Aparato de láser"
             ],
-            "duracion": "45 minutos"
+            "duracion": "45 minutos",
+            "sesiones": "6 Sesiones"
         }
     ]
 }

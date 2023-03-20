@@ -8,17 +8,17 @@
     "itemsTitle": "información de Contacto:",
     "items": [
         {
-            "img": "",
+            "img": "imagenes/icono_correo.jpg",
             "title": "Correo electrónico",
             "description": "contacto@clinicaLMR.es"
         },
         {
-            "img": "",
+            "img": "imagenes/icono_telef.jpg",
             "title": "Teléfono",
             "description": "928123123"
         },
         {
-            "img": "",
+            "img": "imagenes/icono_readsocial.jpg",
             "title": "Redes Sociales",
             "description": "Instagram: @clinicaLMR"
         }
