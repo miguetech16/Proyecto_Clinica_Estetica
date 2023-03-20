@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Panel</title>
-        <script src="http://www.w3schools.com/lib/w3data.js"></script>
-        <script src="javaScript/functionButtonsUserPanel.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-            <div w3-include-html="templates/header.html"></div>
-            <main>
-                <section class="grid_2col">
-                    <button class="btn cita" onclick="pedirCita()"><b>Pedir cita</b></button>
-                    <button class="btn logout" onclick="logout()"><b>Logout</b></button>
-                </section>
-                <div class="usercard">
-                    <img src="imagenes/icono_usuario.png">
-                    <div class="contenido-texto-card-usuario">
-                        <h2>UserName</h2>
-                        <h3>Email:</h3>
-                        <p>felucotrabuco@gmail.com</p>
-                        <h3>Phone Number:</h3>
-                        <p>670556424</p>
-                        <h3>NIE/NIF:</h3>
-                        <p>52432545Q</p>
-                        <h3>Allergies:</h3>
-                        <p class="alergenos">
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                            Soy alergico a la flexiboruplietrina
-                        </p>
-                    </div>
-                </div>
-            </main>
-            <div w3-include-html="templates/footer.html"></div>
-        </div>
-    </body>
-    <script>
-        w3IncludeHTML();
-    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Panel</title>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="javaScript/functionButtonsUserPanel.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div w3-include-html="templates/header.html"></div>
+    <main>
+        <section class="grid_2col">
+            <button class="btn cita" onclick="pedirCita()"><b>Pedir cita</b></button>
+            <button class="btn logout" onclick="logout()"><b>Logout</b></button>
+        </section>
+        <article class="usercard">
+            <img src="imagenes/icono_usuario.png">
+            <section class="contenido-texto-card-usuario">
+                <h2>UserName</h2>
+                <h3>Email:</h3>
+                <p>felucotrabuco@gmail.com</p>
+                <h3>Phone Number:</h3>
+                <p>670556424</p>
+                <h3>NIE/NIF:</h3>
+                <p>52432545Q</p>
+                <h3>Allergies:</h3>
+                <p class="alergenos">
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                    Soy alergico a la flexiboruplietrina
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer w3-include-html="templates/footer.html"></footer>
+</body>
+<script>
+    w3IncludeHTML();
+</script>
+
 </html>

@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sing In</title>
-        <script src="http://www.w3schools.com/lib/w3data.js"></script>
-        <script src="javaScript/formValidationRegister.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div w3-include-html="templates/header.html"></div>
-        <main>
-            <div class="layoutCenter">
-                <div class="logIn">
-                    <h2>Registrarse</h2>
-                    <form name="form" action="/userPanel.html">
-                        <label>Nombre de Usuario:</label>
-                        <input type="text" id="regis_user_name" required>
-                        <label>Correo:</label>
-                        <input type="email" id="email_register" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$" required>
-                        <label>Número de teléfono:</label>
-                        <input id="tlfn_register" pattern="[0-9]{9}" required>
-                        <label>NIF/DNI:</label>
-                        <input id="dni" pattern="[0-9]{8}[A-Za-z]"required>
-                        <label>Contraseña:</label>
-                        <input id="passwd1" type="password" minlength="5" required>
-                        <label>Repetir Contraseña:</label>
-                        <input id="passwd2" type="password" minlength="5" required>
-                        <input type="submit" id="send_register" value="Registrarse">
-                    </form>
-                </div>
-            </div>
-        </main>
-        <div w3-include-html="templates/footer.html"></div>
-    </body>
-    <script>
-        w3IncludeHTML();
-    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing In</title>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script src="javaScript/formValidationRegister.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div w3-include-html="templates/header.html"></div>
+    <main>
+        <div class="layoutCenter">
+            <section class="logIn">
+                <h2>Registrarse</h2>
+                <form name="form" action="/userPanel.html">
+                    <label>Nombre de Usuario:</label>
+                    <input type="text" id="regis_user_name" required>
+                    <label>Correo:</label>
+                    <input type="email" id="email_register" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$"
+                        required>
+                    <label>Número de teléfono:</label>
+                    <input id="tlfn_register" pattern="[0-9]{9}" required>
+                    <label>NIF/DNI:</label>
+                    <input id="dni" pattern="[0-9]{8}[A-Za-z]" required>
+                    <label>Contraseña:</label>
+                    <input id="passwd1" type="password" minlength="5" required>
+                    <label>Repetir Contraseña:</label>
+                    <input id="passwd2" type="password" minlength="5" required>
+                    <input type="submit" id="send_register" value="Registrarse">
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer w3-include-html="templates/footer.html"></footer>
+</body>
+<script>
+    w3IncludeHTML();
+</script>
+
 </html>

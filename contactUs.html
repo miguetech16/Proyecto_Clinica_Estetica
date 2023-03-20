@@ -14,7 +14,7 @@
     <div w3-include-html="templates/titleWithImage.html"></div>
     <main>
       <div class="grid">
-        <div class="item-col3-rowS2">
+        <section class="item-col3-rowS2">
           <form class="formCont" name="form">
             <h2>CONTÁCTANOS</h2>
             <p>Nombre *</p>
@@ -29,21 +29,21 @@
             <textarea placeholder="Contenido de su consulta..." id="textareaContact" required></textarea>
             <input type="submit" class="btn" id="send_contact" value="Enviar">
           </form>
-        </div>
-        <div class="item-colS2">
+        </section>
+        <section class="item-colS2">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.4054730875005!2d-15.453958984579105!3d28.073172215925936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4095d45a6f90ef%3A0xdc47519abbbe0084!2sEscuela%20de%20Ingenier%C3%ADa%20Inform%C3%A1tica!5e0!3m2!1ses!2ses!4v1679088985599!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="item-colS2">
+        </section>
+        <section class="item-colS2">
           <h2 id="contactCards_h2">Información de Contacto de la Clínica</h2>
-          <div class="grid" id="contactCards">
-            <div w3-include-html="templates/card.html"></div>
-            <div w3-include-html="templates/card.html"></div>
-            <div w3-include-html="templates/card.html"></div>
-          </div>
-        </div>
+          <section class="grid" id="contactCards">
+            <article w3-include-html="templates/card.html"></article>
+            <article w3-include-html="templates/card.html"></article>
+            <article w3-include-html="templates/card.html"></article>
+          </section>
+        </section>
       </div>
     </main>
-    <div w3-include-html="templates/footer.html"></div>
+    <footer w3-include-html="templates/footer.html"></footer>
   </body>
   <script>
     w3IncludeHTML();  

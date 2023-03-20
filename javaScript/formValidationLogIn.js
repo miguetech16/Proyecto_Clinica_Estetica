@@ -37,8 +37,8 @@ function existUser(correo, contraseña) {
 
       usuarios.forEach(usuario => {
         if (usuario.email === correo && usuario.contraseña === contraseña) {
-          sessionStorage.setItem('email_logIn', correo);
-          sessionStorage.setItem('password_logIn', contraseña);
+          sessionStorage.setItem('email', correo);
+          sessionStorage.setItem('password', contraseña);
           aparece = true;
         }
       });

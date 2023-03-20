@@ -9,33 +9,33 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div w3-include-html="templates/header.html"></div>
+        <div id="header" w3-include-html="templates/header.html"></div>
         <div w3-include-html="templates/titleWithImage.html"></div>
         <main>
-            <div w3-include-html="templates/distribucion1.html"></div>
-            <div class="grid">
-                <div class="item span2_tablet">
+            <section w3-include-html="templates/distribucion1.html"></section>
+            <section class="grid">
+                <article class="item span2_tablet">
                     <a href="treatment.html">
                         <img src="imagenes/img1.jpg" width="100%" height="100%">
                         <div class="txtCentrado">Tratamiento Destacado</div>
                     </a>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <a href="contactUs.html">
                         <img src="imagenes/img1.jpg" width="100%" height="100%">
                         <div class="txtCentrado">Pida Cita</div>
                     </a>
-                </div>
-                <div class="item">
+                </article>
+                <article class="item">
                     <a href="promotions.html">
                         <img src="imagenes/img1.jpg" width="100%" height="100%">
                         <div class="txtCentrado">Promociones</div>
                     </a>
-                </div>
-            </div>
+                </article>
+            </section>
         </main>
 
-        <div w3-include-html="templates/footer.html"></div>
+        <footer w3-include-html="templates/footer.html"></footer>
     </body>
     <script>
         w3IncludeHTML();
