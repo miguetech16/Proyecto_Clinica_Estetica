@@ -262,6 +262,11 @@
     gap: 0;
   }
 
+  #promotionCards .card{
+    height: auto;
+    
+  }
+
   /* Button */
   .btn {
     font-family: 'Montserrat', sans-serif;
