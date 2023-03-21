@@ -5,16 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Valoraciones</title>
-        <script src="http://www.w3schools.com/lib/w3data.js"></script>
         <script src="javaScript/formValidationReviews.js"></script>
         <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
+        <script defer src="javaScript_Dynamic/DynamicLoad_Reviews.js"></script>
         <link rel="stylesheet" href="style.css">
+        <div id="template_reseña_añadir"></div>
     </head>
     <body>
         <div id="header"></div>
         <div id="title_page"></div>
         <main>
-            <div class="grid">
+            <div class="grid" id="reseñas">
                 <section class="item-col3-rowS7">
                     <form class="formCont" name="form">
                         <h2>VALÓRANOS</h2>
@@ -31,18 +32,8 @@
                         <input type="submit" class="btn" id="send_review" value="Enviar">
                     </form>
                 </section>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
-                <article class="item-colS2" w3-include-html="templates/review.html"></article>
             </div>
         </main>
         <div id="footer"></div>
-        <script>
-            w3IncludeHTML();
-        </script>
     </body>
 </html>
