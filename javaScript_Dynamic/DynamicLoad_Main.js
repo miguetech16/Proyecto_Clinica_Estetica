@@ -69,7 +69,7 @@ addEventListener('load', init);
                         aux.setAttribute('class', "item span2_tablet")
                         aux.innerHTML = `
                             <figure class="item">
-                                <a href=${item.destiny}>
+                                <a onclick= "GuardarTratamiento()">
                                     <div class="txtCentrado">${item.text}</div>
                                     <img src=${item.img} width=100%>
                                 </a>
@@ -89,4 +89,9 @@ addEventListener('load', init);
                 contenidoPrincipal.appendChild(fragment);
             });
         }
+    }
+
+    function GuardarTratamiento(){
+        sessionStorage.setItem("TratamientoSeleccionado", "Tratamiento de Láser");
+        window.location = "treatment.html";
     }
