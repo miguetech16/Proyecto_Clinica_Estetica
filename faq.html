@@ -5,25 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FAQ</title>
-        <script src="http://www.w3schools.com/lib/w3data.js"></script>
         <script src="javaScript_Dynamic/DynamicLoad_Common.js"></script>
+        <script defer src="javaScript_Dynamic/DynamicLoad_FAQ.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="header"></div>
         <div id="title_page"></div>
         <main>    
-            <section class="faqs">
-                <article w3-include-html="templates/question.html"></article>
-                <article w3-include-html="templates/question.html"></article>
-                <article w3-include-html="templates/question.html"></article>
-                <article w3-include-html="templates/question.html"></article>
-                <article w3-include-html="templates/question.html"></article>
-            </section>
+            <section id="faqs"></section>
         </main>
         <div id="footer"></div>
-        <script>
-            w3IncludeHTML();
-        </script>
     </body>
 </html>
