@@ -212,50 +212,54 @@
     color: white;
   }
 
+
   /* Card */
+
+  #card_container {
+    position: relative;
+    display: inline-block;
+  }
+
+  #img_card {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+  }
+
   .card {
-    background: #aeaeae;
-    display: flex;
-    width: 90%;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
-    margin-left: 10%;
+    position: relative;
+    z-index: 0;
+    background-color: #aeaeae;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: auto;
+    height: 8vw;
   }
 
-  .card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 5px solid white;
-    border-radius: 100%;
-    display: block;
-    margin-left: -3em;
-  }
-
-  .card .contenido-texto-card {
-    color: #fff;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    text-align: justify;
-    text-justify: inter-word;
+  .card .contenido-texto-card h3 {
+    font-size: 2vw;
+    padding-left: 1.5em;
+    margin-bottom: 0;
+    text-align: left;
   }
 
   .card .contenido-texto-card p {
     color: #fff;
     padding-top: 10px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    font-size: 1.5vw;
     text-align: center;
-    text-justify: inter-word;
-    font-size: 15px;
   }
 
   #contactCards {
     margin-left: 0;
+    gap: 0;
   }
 
   /* Button */
@@ -327,7 +331,7 @@
     display: block;
   }
 
-  .formCont .valora{
+  .formCont .valora {
     width: 35%;
   }
 
@@ -600,24 +604,23 @@
     h2 {
       font-size: 1.5em;
     }
-    
+
     .introText {
       font-size: 0.7em;
     }
 
     /* Card */
     .card {
-      width: 90%;
+      height: auto;
+      width: 10em;
     }
 
-    #contactCards {
-      width: 100%;
+    .card .contenido-texto-card h3 {
+      font-size: 1.7em;
     }
 
-    .card img {
-      width: 5em;
-      height: 5em;
-      margin-left: -2em;
+    .card .contenido-texto-card p {
+      font-size: 5vw;
     }
 
     /* Button */
@@ -763,16 +766,16 @@
 
     /* Card */
     .card {
-      width: 90%;
+      height: auto;
+      width: 85%;
     }
 
-    #contactCards {
-      width: 100%;
+    .card .contenido-texto-card h3 {
+      font-size: 1.7em;
     }
 
-    .card img {
-      width: 5em;
-      height: 5em;
+    .card .contenido-texto-card p {
+      font-size: 4.5vw;
     }
 
     /* Button */
@@ -881,9 +884,16 @@
     }
 
     /* Style Card */
-    .card img {
-      width: 5em;
-      height: 5em;
+    .card {
+      height: 6em;
+    }
+
+    .card .contenido-texto-card h3 {
+      font-size: 1.5em;
+    }
+
+    .card .contenido-texto-card p {
+      font-size: 2vw;
     }
 
     /* Style distribution  1*/
@@ -965,12 +975,21 @@
     }
 
     /* Card */
-    #contactCards .card img {
-      margin-left: -17%;
+    .card {
+      height: auto;
+      width: 90%;
     }
 
-    #contactCards_h2 {
-      font-size: 1.5em;
+    .card .contenido-texto-card h3 {
+      font-size: 2em;
+      padding-left: 0;
+      text-align: center;
+      margin-left: 0.5em;
+    }
+
+    .card .contenido-texto-card p {
+      padding-top: 0;
+      font-size: 2.5vw;
     }
 
     /* Página Usuario */
