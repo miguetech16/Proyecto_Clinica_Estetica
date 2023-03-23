@@ -184,6 +184,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
+    cursor: pointer
   }
 
   .item:hover {
@@ -191,6 +192,11 @@
     transition: all .5s;
   }
 
+  .item:hover .txtCentrado {
+    color: #000;
+  }
+
+  /* Text format */
   .introText {
     font-family: verdana;
     font-size: 1vw;
@@ -201,13 +207,17 @@
     text-justify: inter-word;
   }
 
+  #treatmentText {
+    font-size: 1.5vw;
+  }
+
   .txtCentrado {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: verdana;
-    font-size: 30px;
+    font-size: 1.2em;
     text-decoration: none;
     color: white;
   }
@@ -240,7 +250,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     width: auto;
-    height: 8vw;
   }
 
   .card .contenido-texto-card h3 {
@@ -262,9 +271,9 @@
     gap: 0;
   }
 
-  #promotionCards .card{
+  #promotionCards .card {
     height: auto;
-    
+
   }
 
   /* Button */
@@ -277,6 +286,7 @@
     width: 50% !important;
     margin-left: 25% !important;
     margin-top: 1em;
+    padding: 1em;
   }
 
   .btn:hover {
@@ -541,6 +551,11 @@
       grid-column: span 1;
     }
 
+    /* Text format */
+    #treatmentText {
+      font-size: 5vw;
+    }
+
     /* Header and logo */
     header {
       text-align: left;
@@ -704,6 +719,11 @@
       grid-column: span 1;
     }
 
+    /* Text format */
+    #treatmentText {
+      font-size: 4vw;
+    }
+
     /* Header and logo */
     #logo {
       height: 3.5em;
@@ -834,6 +854,11 @@
   /* Tablets portrait*/
   @media only screen and (min-width: 481px) and (max-width: 768px) {
 
+    /* Title */
+    .title h1 {
+      font-size: 2.5em;
+    }
+
     /* Grid */
     .grid {
       grid-template-columns: repeat(2, 1fr);
@@ -849,10 +874,19 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .item-colS2 {
+      grid-column: span 1;
+    }
+
     .item-col3-rowS2,
     .item-col3-rowS7,
     .span2_tablet {
       grid-column: span 2;
+    }
+
+    /* Text format */
+    #treatmentText {
+      font-size: 2vw;
     }
 
     /* Footer */
@@ -889,10 +923,6 @@
     }
 
     /* Style Card */
-    .card {
-      height: 6em;
-    }
-
     .card .contenido-texto-card h3 {
       font-size: 1.5em;
     }
@@ -981,8 +1011,7 @@
 
     /* Card */
     .card {
-      height: auto;
-      width: 90%;
+      width: 80%;
     }
 
     .card .contenido-texto-card h3 {

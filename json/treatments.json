@@ -101,5 +101,10 @@
             "duracion": "45 minutos",
             "sesiones": "6 Sesiones"
         }
-    ]
+    ],
+    "imagenes": {
+        "alergenosIMG": "imagenes/alergenos.jpg",
+        "productosIMG": "imagenes/productosUsados.jpg",
+        "sesionesIMG": "imagenes/sesiones.jpg"
+    }
 }

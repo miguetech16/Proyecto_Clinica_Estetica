@@ -7,9 +7,7 @@ const supportsTemplate = function () {
 
 function init() {
     loadTemplate('templates/distribucion3.html', 'distribu3', cargacontenido);
-    loadTemplate('templates/card.html', 'cardsTreatment', cargaAlergenos);
-    loadTemplate('templates/card.html', 'cardsTreatment', cargaProductosUsados);
-    loadTemplate('templates/card.html', 'cardsTreatment', cargaSesiones);
+    loadTemplate('templates/card.html', 'cardsTreatment', cargaCartas);
 }
 
 function loadTemplate(fileName, id, callback) {
@@ -69,7 +67,7 @@ function cargaAlergenos() {
                 contenidos.forEach(contenido => {
                     if (tratamiento === contenido.nombre) {
                         let aux = content.cloneNode(true);
-                        aux.querySelector('#img_card').setAttribute("src", contenido.imagen);
+                        aux.querySelector('#img_card').setAttribute("src", data.imagenes.alergenosIMG);
                         let seccionconte = aux.querySelector('section');
                         seccionconte.querySelector('h3').textContent = "Alérgenos";
                         seccionconte.querySelector('p').textContent = contenido.alergenos;
@@ -98,7 +96,7 @@ function cargaProductosUsados() {
                 contenidos.forEach(contenido => {
                     if (tratamiento === contenido.nombre) {
                         let aux = content.cloneNode(true);
-                        aux.querySelector('#img_card').setAttribute("src", contenido.imagen);
+                        aux.querySelector('#img_card').setAttribute("src", data.imagenes.productosIMG);
                         let seccionconte = aux.querySelector('section');
                         seccionconte.querySelector('h3').textContent = "Productos Usados";
                         seccionconte.querySelector('p').textContent = contenido.productos_usados;
@@ -127,7 +125,7 @@ function cargaSesiones() {
                 contenidos.forEach(contenido => {
                     if (tratamiento === contenido.nombre) {
                         let aux = content.cloneNode(true);
-                        aux.querySelector('#img_card').setAttribute("src", contenido.imagen);
+                        aux.querySelector('#img_card').setAttribute("src", data.imagenes.sesionesIMG);
                         let seccionconte = aux.querySelector('section');
                         seccionconte.querySelector('h3').textContent = "Sesiones";
                         seccionconte.querySelector('p').textContent = contenido.sesiones;
@@ -138,4 +136,10 @@ function cargaSesiones() {
                 contenidoPrincipal.appendChild(fragment);
             });
     }
+}
+
+function cargaCartas() {
+    cargaAlergenos();
+    cargaProductosUsados();
+    cargaSesiones();
 }
