@@ -29,13 +29,14 @@ addEventListener('load', init);
             fetch('json/reviews.json')
             .then(response => response.json())
             .then(data => {
-                const contenidos = data.valoraciones;
-                let contenidoPrincipal = document.querySelector('#reseñas');
-                console.log(contenidoPrincipal);
-                let temp = document.getElementById('reseña');
-                const fragment = document.createDocumentFragment();
-                let content = temp.content;
-                console.log(content);
+            const contenidos = data.valoraciones;
+            let contenidoPrincipal = document.querySelector('#reseñas');
+            console.log(contenidoPrincipal);
+            let temp = document.getElementById('reseña');
+            const fragment = document.createDocumentFragment();
+            let content = temp.content;
+            console.log(content);
+            if(sessionStorage.getItem("email") !== "" && sessionStorage.getItem("email")){
                 contenidos.forEach(contenido => {
                     let aux = content.cloneNode(true);
                     aux.querySelector('details').querySelector('.reseña').textContent = contenido.título;
@@ -47,6 +48,21 @@ addEventListener('load', init);
                     fragment.appendChild(aux);
                 });
                 contenidoPrincipal.appendChild(fragment);
+            } else {
+                contenidoPrincipal.setAttribute("class", "");
+                document.querySelector('.formCont').style.display = 'none';
+                contenidos.forEach(contenido => {
+                    let aux = content.cloneNode(true);
+                    aux.querySelector('details').querySelector('.reseña').textContent = contenido.título;
+                    let estrella = "★";
+                    let valoracion = estrella.repeat(contenido.valoración);
+                    aux.querySelector('details').querySelector('.estrellas').textContent = valoracion;                
+                    aux.querySelector('details').querySelector('.text').textContent = contenido.reseña;
+                    console.log(aux);
+                    fragment.appendChild(aux);
+                });
+                contenidoPrincipal.appendChild(fragment);
+            }
             });
         }
     }
