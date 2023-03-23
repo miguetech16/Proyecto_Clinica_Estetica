@@ -36,7 +36,10 @@ function sendit() {
 
   if (valid && passwd1.value === passwd2.value) {
     sessionStorage.setItem('username', user.value);
-    sessionStorage.setItem('email_register', email.value);
+    sessionStorage.setItem('email', email.value);
+    sessionStorage.setItem('password', passwd1.value);
+    sessionStorage.setItem('telefono', tlfn.value);
+    sessionStorage.setItem('dni', dni.value);
     form.submit();
   } else if (email.validity.patternMismatch || email.validity.valueMissing) {
     email.setCustomValidity('Ingrese un email válido (nombre@dominio.com)');
