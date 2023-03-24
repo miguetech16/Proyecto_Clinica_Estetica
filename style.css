@@ -271,9 +271,13 @@ h3 {
   gap: 0;
 }
 
-#promotionCards .card {
-  height: auto;
+#promotionCards h3 {
+  font-size: 2em;
+  margin-left: 0.4em;
+}
 
+#promotionCards p {
+  color: #000;
 }
 
 /* Button */
@@ -670,6 +674,10 @@ details summary .estrellas {
     font-size: 5vw;
   }
 
+  #promotionCards h3 {
+    font-size: 1em;
+  }
+
   /* Button */
   .btn {
     width: 70%;
@@ -830,6 +838,10 @@ details summary .estrellas {
     font-size: 4.5vw;
   }
 
+  #promotionCards h3 {
+    font-size: 1.3em;
+  }
+
   /* Button */
   .btn {
     width: 70%;
@@ -958,6 +970,10 @@ details summary .estrellas {
     font-size: 2vw;
   }
 
+  #promotionCards .card h3 {
+    font-size: 1em;
+  }
+
   /* Style distribution  1*/
   .grid-1col .img-distribution1 img {
     width: 100%;
@@ -1057,6 +1073,14 @@ details summary .estrellas {
   .usercard .contenido-texto-card-usuario .alergenos {
     padding-left: 20%;
     padding-right: 20%;
+  }
+
+  #promotionCards .card h3 {
+    font-size: 2.5vw;
+  }
+
+  #promotionCards .card p {
+    font-size: 1.5vw;
   }
 
   .cita,
