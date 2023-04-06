@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Grid section*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin: 2em 2em 2em 2em;
+    grid-auto-flow: row dense;
+}
+
+.grid_2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    margin: 2em 2em 2em 2em;
+    grid-auto-flow: row dense;
+}
