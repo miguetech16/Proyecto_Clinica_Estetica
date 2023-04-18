@@ -1,12 +1,23 @@
 <header>
-    <a href="main"><img id=logo src="assets/images/logo_LMR_negro.png" alt=""></a>
-    <a id="user_img" href="main"><img class="user_img" src="assets/images/icono_usuario.png"></a>
+  <a [routerLink]="['/main']">
+    <img
+      id="logo"
+      src="https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/LMR_logo.png?alt=media&token=7b878943-5c57-4004-abe6-a2e0ba00994d"
+      alt="Logo Clinica Estetica"
+    />
+  </a>
+  <a id="user_img">
+    <img
+      class="user_img"
+      src="https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/user_icon1.png?alt=media&token=048fc7af-9436-4da2-abee-633719ec43db"
+    />
+  </a>
 </header>
 <nav class="bar_nav">
-    <ul>
-        <li><a href="treatments">Tratamientos</a></li>
-        <li><a href="#">Promociones</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
-    </ul>
+  <ul>
+    <li><a [routerLink]="['/treatments']">Tratamientos</a></li>
+    <li><a>Promociones</a></li>
+    <li><a>Nosotros</a></li>
+    <li><a>Contacto</a></li>
+  </ul>
 </nav>

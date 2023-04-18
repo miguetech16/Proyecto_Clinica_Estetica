@@ -1,22 +1,1093 @@
-/* You can add global styles to this file, and also import other style files */
 * {
     margin: 0;
     padding: 0;
-}
-
-/*Grid section*/
-.grid {
+  }
+  
+  /* Header and logo */
+  header {
+    background: #ecd8ba;
+    height: 70px;
+    width: 100%;
+    /* hacemos que la cabecera ocupe el ancho completo de la página */
+    text-align: center;
+  }
+  
+  #logo {
+    height: 100px;
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 18px;
+  }
+  
+  /* Navigation bar */
+  .bar_nav {
+    margin: 0px;
+    background: #eeeae4;
+    text-align: center;
+  }
+  
+  .bar_nav ul {
+    margin: 0px;
+    padding-right: 0px;
+    display: inline-block;
+  }
+  
+  .bar_nav ul li {
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+  
+  .bar_nav ul li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .bar_nav ul li a:hover {
+    background: #ecd8ba;
+  }
+  
+  .user_img {
+    height: 35px;
+    width: 35px;
+    float: right;
+    margin-top: 1em;
+    margin-right: 25px;
+    margin-left: -75px;
+  }
+  
+  /* Title Pages */
+  .title {
+    width: 100%;
+    height: 45em;
+    background: linear-gradient(to right, #eeeae4a0, hsla(300, 3%, 6%, 0.664)), url(https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/img1.jpg?alt=media&token=f42b103e-8c35-4cc6-8000-7074e6b6002d);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  .title .wave {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    fill: #f9f7f2;
+    height: 150px;
+    margin-bottom: -1px;
+    /*Fix for safari gap*/
+  }
+  
+  .title .wave svg {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .title h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  /* Footer */
+  #footer-grid {
+    background-color: #ecd8ba;
+    color: #000000;
+    font-size: 1em;
+    margin: 0;
+    padding: 2em;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    height: 6em;
+  }
+  
+  footer h3 {
+    color: #000000;
+  }
+  
+  .footer-opciones ul li h3 {
+    color: #000000;
+    padding: 0.3em;
+    height: 1em;
+  }
+  
+  footer ul {
+    list-style-type: none;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .footer-opciones ul li a h3:hover {
+    cursor: pointer;
+    color: #a56d1a;
+  }
+  
+  footer ul li a h3 {
+    text-align: left;
+  }
+  
+  .copy {
+    text-align: center;
+    background-color: #000;
+    padding: 1em;
+    color: #fff;
+  }
+  
+  .copy p {
+    font-size: 1em;
+  }
+  
+  /* Body styles*/
+  body {
+    background-color: #f9f7f2;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  
+  h1 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-family: verdana;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Distribucion 2 css */
+  .item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer
+  }
+  
+  .item:hover {
+    opacity: 50%;
+    transition: all .5s;
+  }
+  
+  .item:hover .txtCentrado {
+    color: #000;
+  }
+  
+  /* Text format */
+  .introText {
+    font-family: verdana;
+    font-size: 1vw;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  #treatmentText {
+    font-size: 1.5vw;
+  }
+  
+  .txtCentrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: verdana;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  /* Card */
+  
+  #card_container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #img_card {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+  }
+  
+  .card {
+    position: relative;
+    z-index: 0;
+    background-color: #aeaeae;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: auto;
+  }
+  
+  .card .contenido-texto-card h3 {
+    font-size: 2vw;
+    padding-left: 1.5em;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  .card .contenido-texto-card p {
+    color: #fff;
+    padding-top: 10px;
+    font-size: 1.5vw;
+    text-align: center;
+  }
+  
+  #contactCards {
+    margin-left: 0;
+    gap: 0;
+  }
+  
+  #promotionCards h3 {
+    font-size: 2em;
+    margin-left: 0.4em;
+  }
+  
+  #promotionCards p {
+    color: #000;
+  }
+  
+  /* Button */
+  .btn {
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c !important;
+    background: 0;
+    cursor: pointer;
+    transition: all .5s;
+    width: 50% !important;
+    margin-left: 25% !important;
+    margin-top: 1em;
+    padding: 1em;
+  }
+  
+  .btn:hover {
+    background: #78788c;
+    color: #fff;
+  }
+  
+  /* Form CSS */
+  .formCont {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    background: #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1em;
+  }
+  
+  .formCont h2 {
+    margin: 1em 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+    color: #78788c;
+    border-bottom: 3px solid #78788c;
+  }
+  
+  .formCont input,
+  .formCont textarea {
+    width: 100%;
+    display: block;
+    padding: 1em;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 2px solid #bebed2;
+  }
+  
+  .formCont input:focus,
+  .formCont textarea:focus {
+    border-bottom: 2px solid #78788c;
+  }
+  
+  .formCont p {
+    display: block;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    font-size: 14px;
+    color: #5a5a5a;
+  }
+  
+  .formCont textarea {
+    width: 100%;
+    height: 150px;
+    display: block;
+  }
+  
+  .formCont .valora {
+    width: 35%;
+  }
+  
+  /* FAQ CSS */
+  details {
+    background: #eeeae4;
+    padding: 1em 1em;
+    border-radius: 7px;
+    margin: 1em;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  details summary {
+    outline: none;
+    font-size: 20px;
+  
+  }
+  
+  details p {
+    margin-top: 1em;
+    font-size: 16px;
+  }
+  
+  details summary div {
+    display: inline-block;
+    font-size: 25px;
+  }
+  
+  details summary .estrellas {
+    margin-left: 0, 5em;
+  }
+  
+  /* CSS página Inicio de sesión */
+  
+  .logIn {
+    width: 400px;
+    margin: 3em;
+    padding: 3em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logIn form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .logIn input {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .logIn input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 0px;
+  }
+  
+  .logIn input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .logIn h2 {
+    font-size: 2em;
+  }
+  
+  .logIn h5 {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1em;
+  }
+  
+  .logIn label {
+    font-size: 1.5em;
+  }
+  
+  /* Página Usuario */
+  .usercard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e0e0e0;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    margin: 2em auto;
+    padding: 2em;
+    margin-top: 4em;
+  }
+  
+  .usercard img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -60px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .usercard .contenido-texto-card-usuario {
+    margin-top: 1em;
+  }
+  
+  .usercard .contenido-texto-card-usuario h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
+  
+  .usercard .contenido-texto-card-usuario h3 {
+    font-size: 1.2rem;
+    margin-top: 1.5em;
+    color: black;
+  }
+  
+  .usercard .contenido-texto-card-usuario p {
+    margin: 0.5em 0;
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
+  }
+  
+  .usercard .contenido-texto-card-usuario .alergenos {
+    text-align: justify;
+    margin-top: 1.5em;
+    font-size: 1.2rem;
+    color: #444;
+  }
+  
+  .btn2 {
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #78788c;
+    background: 0;
+    cursor: pointer;
+    transition: all .5s;
+    width: 50%;
+    margin-left: 25%;
+    padding: 0.5em;
+    gap: 0;
+  }
+  
+  .cita,
+  .logout {
+    font-size: 2em;
+  }
+  
+  .cita:hover {
+    background: #1c811c;
+    color: #fff;
+  }
+  
+  .logout:hover {
+    background: #ac1b04;
+    color: #ffffff;
+  }
+  
+  /* Layouts creados */
+  .layoutCenter {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  /*Grid section*/
+  .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     margin: 2em 2em 2em 2em;
     grid-auto-flow: row dense;
-}
-
-.grid_2col {
+  }
+  
+  .grid_2col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     margin: 2em 2em 2em 2em;
     grid-auto-flow: row dense;
-}
+  }
+  
+  .item-colS1 {
+    grid-column: span 1;
+  }
+  
+  .item-colS2 {
+    grid-column: span 2;
+  }
+  
+  .item-col3-rowS2 {
+    grid-column: 3;
+    grid-row: span 2;
+  }
+  
+  .item-col3-rowS7 {
+    grid-column: 3;
+    grid-row: span 7;
+  }
+  
+  /* Media Queries */
+  /* Extra Small Devices and Phones */
+  @media only screen and (max-width: 319px) {
+  
+    /* Grid */
+    .grid {
+      grid-template-columns: 1fr;
+      margin: 1em;
+    }
+  
+    .grid_2col {
+      grid-template-columns: 1fr;
+    }
+  
+    .item-colS2,
+    .item-col3-rowS2,
+    .item-col3-rowS7 {
+      grid-column: span 1;
+    }
+  
+    /* Text format */
+    #treatmentText {
+      font-size: 5vw;
+    }
+  
+    /* Header and logo */
+    header {
+      text-align: left;
+    }
+  
+    #logo {
+      height: 3.5em;
+      width: auto;
+      margin-top: 0.5em;
+    }
+  
+    /* Title Pages */
+    .title {
+      display: none;
+    }
+  
+    /* Navigation bar */
+    .bar_nav ul li {
+      display: block;
+      font-size: 1.5em;
+      margin-top: 0em;
+    }
+  
+    /* Footer */
+    #footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 1em;
+      gap: 0;
+    }
+  
+    .footer-logo img {
+      height: 4em;
+      width: 8em;
+    }
+  
+    .footer-opciones ul li h3 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+  
+    .cookies {
+      display: none;
+    }
+  
+    .copy p {
+      font-size: 0.8em;
+    }
+  
+    /* Form CSS */
+    .formCont {
+      margin-left: 0;
+      padding: 0.5em;
+    }
+  
+    .formCont h2 {
+      margin: 1em 0.5em;
+      font-size: 1.5em;
+    }
+  
+    .formCont p {
+      margin-left: 0.5em;
+    }
+  
+    /* Body styles*/
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    .introText {
+      font-size: 0.7em;
+    }
+  
+    /* Card */
+    .card {
+      height: auto;
+      width: 70%;
+    }
+  
+    .card .contenido-texto-card h3 {
+      font-size: 1.7em;
+    }
+  
+    .card .contenido-texto-card p {
+      font-size: 5vw;
+    }
+  
+    #promotionCards h3 {
+      font-size: 1em;
+    }
+  
+    /* Button */
+    .btn {
+      width: 70%;
+      margin-left: 15%;
+      font-size: 1em;
+    }
+  
+    /* CSS página Inicio de sesión */
+  
+    .logIn {
+      width: 65%;
+      margin: 4em 0.2em 4em 0.2em;
+      padding: 2em;
+    }
+  
+    .logIn input {
+      width: 90%;
+    }
+  
+    .logIn input[type="submit"] {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 1em;
+    }
+  
+    .logIn h5 {
+      font-size: 1em;
+    }
+  
+    .logIn h2 {
+      font-size: 1.75em;
+    }
+  
+    .logIn label {
+      font-size: 1em;
+    }
+  
+    /* Página Usuario */
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .usercard .contenido-texto-card-usuario p {
+      font-size: 13px;
+      margin-bottom: 1em;
+    }
+  
+    .usercard .contenido-texto-card-usuario h3 {
+      font-size: 20px;
+    }
+  
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-size: 13px;
+    }
+  
+  }
+  
+  /*Small Devices and Phones */
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+  
+    /* Grid */
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .item-colS2,
+    .item-col3-rowS2,
+    .item-col3-rowS7 {
+      grid-column: span 1;
+    }
+  
+    /* Text format */
+    #treatmentText {
+      font-size: 4vw;
+    }
+  
+    /* Header and logo */
+    #logo {
+      height: 3.5em;
+      width: auto;
+      margin-top: 0.5em;
+    }
+  
+    /* Title Pages */
+    .title {
+      display: none;
+    }
+  
+    /* Navigation bar */
+    .bar_nav ul li {
+      display: block;
+      font-size: 1.5em;
+      margin-top: 0em;
+    }
+  
+    /* Footer */
+    #footer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1em;
+      gap: 0;
+    }
+  
+    .footer-logo img {
+      height: 4em;
+      width: 8em;
+    }
+  
+    .footer-opciones ul li h3 {
+      font-size: 1.2em;
+      margin: 0;
+    }
+  
+    .cookies {
+      display: none;
+    }
+  
+    .copy p {
+      font-size: 0.8em;
+    }
+  
+    /* Form CSS */
+    .formCont {
+      margin-left: 0;
+      padding: 0.5em;
+    }
+  
+    .formCont h2 {
+      margin: 1em 0.5em;
+      font-size: 1.5em;
+    }
+  
+    /* Body styles*/
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    .introText {
+      font-size: 0.8em;
+    }
+  
+    /* Card */
+    .card {
+      height: auto;
+      width: 85%;
+    }
+  
+    .card .contenido-texto-card h3 {
+      font-size: 1.7em;
+    }
+  
+    .card .contenido-texto-card p {
+      font-size: 4.5vw;
+    }
+  
+    #promotionCards h3 {
+      font-size: 1.3em;
+    }
+  
+    /* Button */
+    .btn {
+      width: 70%;
+      margin-left: 15%;
+      font-size: 1em;
+    }
+  
+    /* CSS página Inicio de sesión */
+  
+    .logIn {
+      width: 65%;
+      margin: 4em 0.2em 4em 0.2em;
+      padding: 2em;
+    }
+  
+    .logIn input {
+      width: 90%;
+    }
+  
+    .logIn input[type="submit"] {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 1.5em;
+    }
+  
+    .logIn h5 {
+      font-size: 1em;
+    }
+  
+    .logIn label {
+      font-size: 1.5em;
+    }
+  
+    /* Página Usuario */
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+  }
+  
+  /* Tablets portrait*/
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+  
+    /* Title */
+    .title h1 {
+      font-size: 2.5em;
+    }
+  
+    /* Grid */
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .grid-1col {
+      grid-template-columns: 1fr;
+      gap: 1em;
+    }
+  
+    .grid_tablet_distribution1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .item-col3-rowS2,
+    .item-col3-rowS7,
+    .span2_tablet {
+      grid-column: span 2;
+    }
+  
+    #imgTratamiento {
+      grid-column: span 2;
+    }
+  
+    /* Text format */
+    #treatmentText {
+      font-size: 2vw;
+    }
+  
+    /* Footer */
+    #footer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1em;
+      gap: 0;
+    }
+  
+    #footer-grid .cookies {
+      grid-column: span 2;
+      text-align: center;
+    }
+  
+    #footer-grid .cookies p {
+      font-size: 15px;
+    }
+  
+    #footer-grid .cookies h3 {
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+  
+    .footer-opciones ul li h3 {
+      font-size: 1.7em;
+      margin: 0;
+    }
+  
+    /* Navigation bar */
+    .bar_nav ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* Style Card */
+    .card .contenido-texto-card h3 {
+      font-size: 1.5em;
+    }
+  
+    .card .contenido-texto-card p {
+      font-size: 2vw;
+    }
+  
+    #promotionCards .card h3 {
+      font-size: 1em;
+    }
+  
+    /* Style distribution  1*/
+    .grid-1col .img-distribution1 img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .grid-1col .img-distribution1 {
+      text-align: center;
+    }
+  
+    .grid-1col .item-colS2 h2 {
+      font-size: 30px;
+    }
+  
+    .grid-1col .item-colS2 p {
+      font-size: small;
+      margin: 0px;
+    }
+  
+    /* Style Contact Cards */
+    #contactCards .card {
+      margin-left: 1.5em;
+    }
+  
+    /* Style Form */
+    .formCont {
+      margin: 0;
+    }
+  
+    /* Página Usuario */
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    /* CSS página Inicio de sesión */
+  
+    .logIn {
+      width: 350px;
+      margin: 3em;
+      padding: 3em;
+    }
+  
+    .logIn input {
+      width: 90%;
+    }
+  
+    .logIn input[type="submit"] {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 1.5em;
+    }
+  
+    .logIn h5 {
+      font-size: 1em;
+    }
+  
+    .logIn label {
+      font-size: 1.5em;
+    }
+  
+  }
+  
+  /*Small Laptops and Tablets landscape*/
+  @media only screen and (min-width: 769px) and (max-width: 1068px) {
+  
+    /* Grid */
+    #contactCards {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Card */
+    .card {
+      width: 80%;
+    }
+  
+    .card .contenido-texto-card h3 {
+      font-size: 2em;
+      padding-left: 0;
+      text-align: center;
+      margin-left: 0.5em;
+    }
+  
+    .card .contenido-texto-card p {
+      padding-top: 0;
+      font-size: 2.5vw;
+    }
+  
+    /* Página Usuario */
+    .usercard .contenido-texto-card-usuario .alergenos {
+      padding-left: 20%;
+      padding-right: 20%;
+    }
+  
+    #promotionCards .card h3 {
+      font-size: 2.5vw;
+    }
+  
+    #promotionCards .card p {
+      font-size: 1.5vw;
+    }
+  
+    .cita,
+    .logout {
+      font-size: 1.5em;
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+  }

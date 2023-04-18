@@ -1,0 +1,8 @@
+1 - npm install firebase
+2 - npm install -g firebase-tools
+3 - firebase login
+Allow Firebase to collect CLI usage and error reporting information? NO
+The login must be with a google account associated with the firebase project
+4 - ng g enviroments
+5 - firebase init
+6 - ng add @angular/fire

@@ -4,9 +4,9 @@ import { MainComponent } from './main/main.component';
 import { TreatmentsComponent } from './treatments/treatments.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
-  {path: 'main', component: MainComponent},
-  {path: 'treatments', component: TreatmentsComponent}
+  {path:'', redirectTo:'/main', pathMatch:'full' },
+  {path:'main', component: MainComponent},
+  {path:'treatments', component: TreatmentsComponent}
 ]
 
 @NgModule({
