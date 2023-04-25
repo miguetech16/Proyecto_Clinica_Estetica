@@ -13,6 +13,9 @@ import { TreatmentsComponent } from './treatments/treatments.component';
 import { FooterComponent } from './footer/footer.component';
 import { environment } from '../environments/environment';
 import { TreatmentComponent } from './treatment/treatment.component';
+import { ImageCardComponent } from './image-card/image-card.component';
+import { ImageDescriptionButtonComponent } from './image-description-button/image-description-button.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { TreatmentComponent } from './treatment/treatment.component';
     MainComponent,
     TreatmentsComponent,
     FooterComponent,
-    TreatmentComponent
+    TreatmentComponent,
+    ImageCardComponent,
+    ImageDescriptionButtonComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
