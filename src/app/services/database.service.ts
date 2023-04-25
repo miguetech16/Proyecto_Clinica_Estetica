@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Treatment } from '../interfaces/treatment.interface';
+import { Promotion } from '../interfaces/promotion.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,11 @@ export class DatabaseService{
   getTreatment(id:string): Observable<Treatment>{
     const docRef = doc(this.firebase, `treatments/${id}`);
     return docData(docRef) as Observable<Treatment>;
+  }
+
+  getPromotions(): Observable<Promotion[]>{
+    const promotionsRef = collection(this.firebase, 'promotions');
+    return collectionData(promotionsRef, {idField: 'id'}) as Observable<Promotion[]>;
   }
 
 }

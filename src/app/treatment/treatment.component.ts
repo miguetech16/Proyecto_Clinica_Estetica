@@ -13,7 +13,6 @@ export class TreatmentComponent implements OnInit, OnDestroy {
   treatment!: Treatment;
   suscription!: Subscription;
   aparecer = false;
-  products!: string;
 
   constructor(private router: Router, private databaseService: DatabaseService){}
 
