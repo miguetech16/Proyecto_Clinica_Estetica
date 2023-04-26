@@ -1,0 +1,7 @@
+<section id="promotionCards" class="grid">
+    <app-card *ngFor="let promotion of promotions_observable | async" 
+    [title]="promotion.title" 
+    [description]="promotion.description"
+    [image]="promotion.image">
+    </app-card>
+</section>

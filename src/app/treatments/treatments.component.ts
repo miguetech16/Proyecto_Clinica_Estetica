@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { DatabaseService } from '../services/database.service';
 import { Treatment } from '../interfaces/treatment.interface';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-treatments',
@@ -10,15 +11,22 @@ import { Treatment } from '../interfaces/treatment.interface';
 export class TreatmentsComponent implements OnInit {
   title = "Tratamientos"
 
-  treatments!: Treatment[];
+  treatments!: Observable<Treatment[]>;
+  
 
   constructor(private database: DatabaseService){}
 
   ngOnInit(): void {
-      this.database.getTreatments()
-      .subscribe(treatments => {
-        this.treatments = treatments
-      })
+    this.treatments = this.database.getTreatments();
   }
+
+  /** 
+  subscription!: Subscription;
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe;
+  }
+  */
+
+  
 
 }
