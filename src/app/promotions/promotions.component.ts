@@ -10,6 +10,7 @@ import { Promotion } from '../interfaces/promotion.interface';
 })
 export class PromotionsComponent implements OnInit {
   promotions_observable!: Observable<Promotion[]>
+  title = "Promociones";
 
   constructor(private databaseService: DatabaseService){}
 

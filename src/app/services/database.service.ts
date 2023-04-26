@@ -28,8 +28,8 @@ export class DatabaseService{
   }
 
   getDoctors(): Observable<Doctor[]>{
-    const placeRef = collection(this.firebase, 'aboutUs');
-    return collectionData(placeRef, {idField: 'id'}) as Observable<Doctor[]>;
+    const DoctorsRef = collection(this.firebase, 'aboutUs');
+    return collectionData(DoctorsRef, {idField: 'id'}) as Observable<Doctor[]>;
   }
 
 }
