@@ -8,6 +8,7 @@ import { Treatment } from '../interfaces/treatment.interface';
   styleUrls: ['./treatments.component.css']
 })
 export class TreatmentsComponent implements OnInit {
+  title = "Tratamientos"
 
   treatments!: Treatment[];
 
