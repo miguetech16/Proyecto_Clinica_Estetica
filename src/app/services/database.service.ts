@@ -32,4 +32,21 @@ export class DatabaseService{
     return collectionData(DoctorsRef, {idField: 'id'}) as Observable<Doctor[]>;
   }
 
+  getMain(): Observable<any[]> {
+    const MainRef = collection(this.firebase, 'home');
+    return collectionData(MainRef, {idField: 'id'});
+  }
+
+  getSecondary(): Observable<any[]> {
+    const mainRef = collection(this.firebase, 'home');
+    const documentRef = doc(mainRef, 'vvdOUW2dO2xMnbmoDub2');
+    const secondaryRef = collection(documentRef, 'items');
+    return collectionData(secondaryRef, { idField: 'id' });
+  }
+
+  getFaqs(): Observable<any[]> {
+    const MainRef = collection(this.firebase, 'faq');
+    return collectionData(MainRef, {idField: 'id'});
+  }
+
 }

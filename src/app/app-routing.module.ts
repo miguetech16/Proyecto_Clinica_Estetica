@@ -5,6 +5,7 @@ import { TreatmentsComponent } from './treatments/treatments.component';
 import { TreatmentComponent } from './treatment/treatment.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { FaqsComponent } from './faqs/faqs.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/main', pathMatch:'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'aboutUs', component: AboutUsComponent},
   {path:'treatment/:name', component: TreatmentComponent},
   {path:'promotions', component: PromotionsComponent},
+  {path:'faqs', component: FaqsComponent},
   {path:'**', redirectTo:'/main', pathMatch:'full' }
 ]
 

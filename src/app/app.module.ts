@@ -21,6 +21,7 @@ import { PromotionsComponent } from './promotions/promotions.component';
 import { TitleWithImageComponent } from './title-with-image/title-with-image.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ImageTitleDescriptionComponent } from './image-title-description/image-title-description.component';
+import { FaqsComponent } from './faqs/faqs.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ImageTitleDescriptionComponent } from './image-title-description/image-
     PromotionsComponent,
     TitleWithImageComponent,
     AboutUsComponent,
-    ImageTitleDescriptionComponent
+    ImageTitleDescriptionComponent,
+    FaqsComponent
   ],
   imports: [
     BrowserModule,
