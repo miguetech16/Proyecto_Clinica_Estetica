@@ -1,6 +1,24 @@
-<div class="item">
-    <a>
-        <div class="txtCentrado">{{treatment.name}}</div>
-        <img [src]="treatment.image" width=100%>
-    </a>
-</div>
+<ng-container *ngIf="aparecer">
+    <app-title-with-image [title]="treatment.name"></app-title-with-image>
+    <app-image-description-button 
+    [image]="treatment.image" 
+    [description]="treatment.description"
+    [route]="['/main']"></app-image-description-button>
+    <section class="grid" id="cardsTreatment">
+        <app-card 
+        [title] = "'Productos Usados'"
+        [description]="treatment.usedProducts.toString()"
+        [image] = "'https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/usedProducts_icon.jpg?alt=media&token=04c2c7dc-db4d-4c98-8743-df1c97c957c1'">
+        </app-card>
+        <app-card 
+        [title] = "'Alergenos'"
+        [description]="treatment.allergens"
+        [image]="'https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/allergens.jpg?alt=media&token=adb601b3-8abc-4cd0-a0cd-97211d93e2ee'">
+        </app-card>
+        <app-card 
+        [title] = "'Sesiones'"
+        [description]="treatment.sesions + ' sesiones de ' + treatment.duration + ' minutos'"
+        [image] = "'https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/sesions_icon.jpg?alt=media&token=d43c0918-437c-4751-9796-7814884eb2ab'">
+        </app-card>
+    </section>
+</ng-container>

@@ -1,0 +1,7 @@
+<app-title-with-image [title]="title"></app-title-with-image>
+<details *ngFor="let faq of faqs">
+    <summary>{{faq.question}}</summary>
+    <p class="text">
+        {{faq.answer}}
+    </p>
+</details>

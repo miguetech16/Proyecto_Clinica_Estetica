@@ -6,5 +6,5 @@ export interface Treatment {
     allergens:string;
     usedProducts:string[];
     duration:number;
-    sesion:number;
+    sesions:number;
 }

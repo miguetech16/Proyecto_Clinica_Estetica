@@ -1,0 +1,5 @@
+<app-title-with-image [title]="title"></app-title-with-image>
+<section class="grid_tablet_distribution1">
+    <app-image-title-description *ngFor="let doctor_element of doctors" [image]="doctor_element.image" [title]="doctor_element.name" [text]="doctor_element.trajectory">     
+    </app-image-title-description>
+</section>

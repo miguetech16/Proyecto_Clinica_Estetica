@@ -1,5 +1,9 @@
+<app-title-with-image [title]="title"></app-title-with-image>
 <section class="grid">
-    <app-treatment *ngFor="let treatment_element of treatments" [treatment]="treatment_element">
+    <app-image-card *ngFor="let treatment_element of treatments | async" 
+    [img]="treatment_element.image"
+    [name]="treatment_element.name"
+    [linkroute]="['/treatment',treatment_element.id]">
         
-    </app-treatment>
+    </app-image-card>
 </section>
