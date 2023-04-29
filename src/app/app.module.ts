@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -13,6 +13,7 @@ import { TreatmentsComponent } from './treatments/treatments.component';
 import { FooterComponent } from './footer/footer.component';
 import { environment } from '../environments/environment';
 import { TreatmentComponent } from './treatment/treatment.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 
 @NgModule({
@@ -22,11 +23,13 @@ import { TreatmentComponent } from './treatment/treatment.component';
     MainComponent,
     TreatmentsComponent,
     FooterComponent,
-    TreatmentComponent
+    TreatmentComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
@@ -36,3 +39,5 @@ import { TreatmentComponent } from './treatment/treatment.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
