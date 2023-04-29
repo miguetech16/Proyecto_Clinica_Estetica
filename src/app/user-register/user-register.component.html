@@ -2,7 +2,7 @@
           <section class="logIn">
                 <h2>Registrarse</h2>
                 
-                <form name="form" [formGroup]="singupForm" (ngSubmit)="validateForm()">
+                <form name="form" [formGroup]="singupForm" (ngSubmit)="onSubmit()">
                     <label>Nombre de Usuario:</label>
                     <input type="text" name="userName" formControlName="userName">
                     <div *ngIf="singupForm.get('userName')?.touched && singupForm.get('userName')?.errors?.['required']">
@@ -11,7 +11,7 @@
                     <div *ngIf="singupForm.get('userName')?.errors?.['minlength']" class="error">El nombre de usuario es demasiado corto. </div>
                     <div *ngIf="singupForm.get('userName')?.errors?.['maxlength']" class="error">El nombre es usuario es demasiado largo. </div>
 
- 
+
                     <label>Correo:</label>
                     <input type="email" id="email_register" formControlName="userEmail">
                     <div *ngIf="singupForm.get('userEmail')?.touched && singupForm.get('userEmail')?.errors?.['required']">
@@ -40,11 +40,12 @@
                     </div>
                     <div *ngIf="singupForm.get('password')?.errors?.['minlength']" class="error">Contraseña demasiado corta. </div>
 
-                    <!---
                     <label >Repetir Contraseña:</label>
-                    <input id="passwd2" type="password" formControlName="password">
-                    -->
+                    <input id="passwd2" type="password" formControlName="confirmPassword">
+                    <div *ngIf="singupForm.get('confirmPassword')?.touched && !passwordConfirmation()">Las contraseñas no coinciden. </div>
+
                     <input  type="submit" id="send_register" value="Registrarse">
+                    <div *ngIf="this.exist == true">{{this.userError}}</div>
 
                 </form>
                    

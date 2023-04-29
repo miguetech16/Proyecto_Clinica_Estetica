@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, doc, docData, addDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Treatment } from '../interfaces/treatment.interface';
 import { Promotion } from '../interfaces/promotion.interface';
+import { User } from '../interfaces/user.interface';
 
 import { Doctor } from '../interfaces/doctor.interface';
+import { user } from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root'
 })
@@ -47,6 +49,16 @@ export class DatabaseService{
   getFaqs(): Observable<any[]> {
     const MainRef = collection(this.firebase, 'faq');
     return collectionData(MainRef, {idField: 'id'});
+  }
+
+  getUsers(): Observable<any[]> {
+    const userRef = collection(this.firebase, 'users');
+    return collectionData(userRef, { idField: 'userDni'});
+  }
+
+  addUser(User: User) {
+    const userRef = collection(this.firebase, 'users');
+    return addDoc(userRef, User);
   }
 
 }
