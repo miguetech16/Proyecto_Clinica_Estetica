@@ -15,6 +15,8 @@ export class UserRegisterComponent implements OnInit{
  singupForm!: FormGroup;
  users!: User[];
  exist: boolean = false;
+ aparecenErrores = false;
+ contradistintas = true;
  userError: string = "Este usuario ya se encuentra registrado."
 
  constructor (private builder: FormBuilder, private database: DatabaseService, private router: Router) { }
@@ -29,40 +31,41 @@ export class UserRegisterComponent implements OnInit{
 initForm(): FormGroup {
   return this.builder.group({
 
-    userName: new FormControl('', [
+    userName: ['', [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(15),
-    ]),
-    userEmail: new FormControl('', [
+    ]],
+    userEmail: ['', [
       Validators.required,
-      Validators.pattern("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$"),
-    ]),
-    phoneNumber: new FormControl('', [
+      Validators.pattern(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}$/)
+    ]],
+    phoneNumber: ['', [
       Validators.required,
-      Validators.pattern("[0-9]{9}"),
-    ]),
-    userDNI: new FormControl('', [
+      Validators.pattern(/[0-9]{9}$/),
+      Validators.max(999999999),
+    ]],
+    userDNI: ['', [
       Validators.required,
-      Validators.pattern("[0-9]{8}[A-Za-z]"),
-    ]),
-    password: new FormControl('', [
+      Validators.pattern(/[0-9]{8}[A-Za-z]/),
+      Validators.maxLength(9)
+    ]],
+    password: ['', [
       Validators.required,
-      Validators.minLength(6),
-    ]),
-    confirmPassword: new FormControl('',[
+      Validators.minLength(6)
+    ]],
+    confirmPassword: ['',[
       Validators.required,     
-      Validators.minLength(6),  
-    ])
+      Validators.minLength(6)
+    ]]
   })
 }
 
 
 passwordConfirmation(){
-  const password = this.singupForm.get('password');
-  const confirmPassword = this.singupForm.get('confirmPassword');
-
-  if (password != confirmPassword) {
+  const password = this.singupForm.get('password')?.value;
+  const confirmPassword = this.singupForm.get('confirmPassword')?.value;
+  if ((password == confirmPassword) && (password != "")) {
     return false;
   }
   return true;
@@ -84,16 +87,20 @@ userValidation(){
   }
 }
 
- async onSubmit(){
+onSubmit(){
   this.exist = false;
+  this.aparecenErrores = true
+  this.contradistintas = this.passwordConfirmation();
+  console.log(this.contradistintas)
   if (this.singupForm.valid){
     console.log('UserRegisterForm ->', this.singupForm.value);
+    
 
     this.userValidation();
     if (!this.exist){
-    const response = await this.database.addUser(this.singupForm.value);
-    console.log(response);
-    this.router.navigate(['/main']);
+    //const response = await this.database.addUser(this.singupForm.value);
+    //console.log(response);
+    //this.router.navigate(['/main']);
     }
   }
  }
