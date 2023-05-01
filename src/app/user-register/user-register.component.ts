@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { DatabaseService } from '../services/database.service';
 import { User } from '../interfaces/user.interface';
 import { Router } from '@angular/router';
+import { AutencaciónUserServiceService } from '../services/autencacion-user-service.service';
 
 @Component({
   selector: 'app-user-register',
@@ -19,7 +20,7 @@ export class UserRegisterComponent implements OnInit{
  contradistintas = true;
  userError: string = "Este usuario ya se encuentra registrado."
 
- constructor (private builder: FormBuilder, private database: DatabaseService, private router: Router) { }
+ constructor (private builder: FormBuilder, private database: DatabaseService, private router: Router, private userAuth: AutencaciónUserServiceService) { }
 
  ngOnInit(): void {
   this.singupForm = this.initForm()
@@ -87,20 +88,26 @@ userValidation(){
   }
 }
 
-onSubmit(){
+async onSubmit(){
   this.exist = false;
   this.aparecenErrores = true
   this.contradistintas = this.passwordConfirmation();
-  console.log(this.contradistintas)
+  console.log(this.singupForm.value.userDNI)
   if (this.singupForm.valid){
-    console.log('UserRegisterForm ->', this.singupForm.value);
-    
-
     this.userValidation();
-    if (!this.exist){
-    //const response = await this.database.addUser(this.singupForm.value);
-    //console.log(response);
-    //this.router.navigate(['/main']);
+     if (!this.exist){
+      const NuevoUsuario: User = {
+        userName: this.singupForm.value.userName,
+        userEmail: this.singupForm.value.userEmail,
+        phoneNumber: this.singupForm.value.phoneNumber,
+        userDNI: this.singupForm.value.userDNI,
+        Alergias: ""
+      }
+      const responseAuth = await this.userAuth.registerUser(this.singupForm.value.userEmail, this.singupForm.value.password)
+      const response = await this.database.addUser(NuevoUsuario);
+      console.log(responseAuth);
+      console.log(response);
+      this.router.navigate(['/main']);
     }
   }
  }
