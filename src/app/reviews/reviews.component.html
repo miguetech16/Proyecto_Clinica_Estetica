@@ -1,0 +1,81 @@
+
+<div class="grid" id="reseñas">
+    <section class="item-col3-rowS7">
+        <form class="formCont" name="form" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+            <h2>VALÓRANOS</h2>
+
+            <!-- Campo Usuario -->
+            <p>Nombre *</p>
+            <input type="text" placeholder="Escriba su nombre aquí.." id="name_review" formControlName="userName"
+            [ngStyle]="{'border-color': (reviewForm.get('userName')?.errors && aparecenErrores) ?  'red' : 'black'}">
+            <div class="errores">
+                <div *ngIf="reviewForm.get('userName')?.errors?.['required'] && aparecenErrores">
+                    · El campo de nombre de usuario es obligatorio
+                </div>
+                <div *ngIf="reviewForm.get('userName')!.errors?.['minlength'] && aparecenErrores">
+                    · El nombre de usuario es demasiado corto 
+                </div>
+                <div *ngIf="reviewForm.get('userName')!.errors?.['maxlength'] && aparecenErrores">
+                    · El nombre es usuario es demasiado largo
+                </div>
+            </div>
+    
+            <!-- Campo Correo Electrónico -->
+            <p>Email *</p>
+            <input type="email" id="email_review" placeholder="Escriba su email aquí.." formControlName="userEmail"
+            [ngStyle]="{'border-color': (reviewForm.get('userEmail')?.errors && aparecenErrores) ?  'red' : 'black'}">
+             <div class="errores">
+                <div *ngIf="reviewForm.get('userEmail')?.errors?.['required'] && aparecenErrores">
+                    · El campo de correo electrónico es obligatorio
+                </div>
+                <div *ngIf="reviewForm.get('userEmail')?.errors?.['pattern'] && aparecenErrores">
+                    · Introduzca un correo electrónico válido
+                </div>
+            </div>
+
+            <!-- Campo Puntuación  -->
+            <p>Puntuación del servicio *</p>
+            <input type="number" class="valora" id="valoracion" placeholder="(0-5)" formControlName="valoration"
+            [ngStyle]="{'border-color': (reviewForm.get('valoration')?.errors && aparecenErrores) ?  'red' : 'black'}"
+            >
+            <div class="errores">
+                <div *ngIf="reviewForm.get('valoration')?.errors?.['required'] && aparecenErrores">
+                    · El campo de puntuación de la reseña es obligatorio
+                </div>
+                <div *ngIf="reviewForm.get('valoration')?.errors?.['pattern'] && aparecenErrores">
+                    · Es necesario que la puntuación de la reseña sea un número del 0 al 5
+                </div>
+            </div>
+
+            <!-- Campo Título -->
+            <p>Título de la valoración</p>
+            <input placeholder="Escriba el título de su valoración..." formControlName="reviewTitle"
+            [ngStyle]="{'border-color': (reviewForm.get('reviewTitle')?.errors && aparecenErrores) ?  'red' : 'black'}"
+            >
+            <div class="errores">
+                <div *ngIf="reviewForm.get('reviewTitle')?.errors?.['required'] && aparecenErrores">
+                    · El campo del titulo de la reseña es obligatorio
+                </div>
+            </div>
+
+            <!-- Campo Reseña -->
+            <p>Valoración *</p>
+            <textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." id="textareaReviews" formControlName="review"
+            [ngStyle]="{'border-color': (reviewForm.get('reviewTitle')?.errors && aparecenErrores) ?  'red' : 'black'}"></textarea>
+            <div class="errores">
+                <div *ngIf="reviewForm.get('review')?.errors?.['required'] && aparecenErrores">
+                    · Es necesario rellenar la reseña, con su experiencia
+                </div>
+                <div *ngIf="reviewForm.get('review')?.errors?.['minlength'] && aparecenErrores">
+                    · La reseña es demasiado corta, al menos necesita 6 caracteres 
+                </div>
+                <div *ngIf="reviewForm.get('review')?.errors?.['maxlength'] && aparecenErrores">
+                    · La reseña es demasiado larga, como maximo se permiten 200 caracteres
+                </div>
+            </div>
+
+            <!-- Botón de subida -->
+            <input type="submit" class="btn" id="send_review" value="Enviar">
+        </form>
+    </section>
+</div>

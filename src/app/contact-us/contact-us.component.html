@@ -1,0 +1,102 @@
+<div class="grid">
+    <section class="item-col3-rowS2">
+      <form class="formCont" name="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <h2>CONTÁCTANOS</h2>
+
+        <!-- Campo Usuario -->
+        <p>Nombre *</p>
+        <input type="text" id="name_contact" placeholder="Escriba su nombre aquí.." formControlName="userName"
+        [ngStyle]="{'border-color': (contactForm.get('userName')?.errors && aparecenErrores) ?  'red' : 'black'}">
+        <div class="errores">
+            <div *ngIf="contactForm.get('userName')?.errors?.['required'] && aparecenErrores">
+                · El campo de nombre de usuario es obligatorio
+            </div>
+            <div *ngIf="contactForm.get('userName')!.errors?.['minlength'] && aparecenErrores">
+                · El nombre de usuario es demasiado corto 
+            </div>
+            <div *ngIf="contactForm.get('userName')!.errors?.['maxlength'] && aparecenErrores">
+                · El nombre es usuario es demasiado largo
+            </div>
+        </div>
+
+        <!-- Campo Correo Electrónico -->
+        <p>Email *</p>
+        <input type="email" id="email_contact" placeholder="Escriba su email aquí.." formControlName="userEmail"
+        [ngStyle]="{'border-color': (contactForm.get('userEmail')?.errors && aparecenErrores) ?  'red' : 'black'}">
+         <div class="errores">
+            <div *ngIf="contactForm.get('userEmail')?.errors?.['required'] && aparecenErrores">
+                · El campo de correo electrónico es obligatorio
+            </div>
+            <div *ngIf="contactForm.get('userEmail')?.errors?.['pattern'] && aparecenErrores">
+                · Introduzca un correo electrónico válido
+            </div>
+        </div>
+
+        <!-- Campo Telefono -->
+        <p>Número de teléfono:</p>
+        <input type="number" id="tlfn_contact" placeholder="Escriba su teléfono aquí.."
+        [ngStyle]="{'border-color': (contactForm.get('phoneNumber')?.errors && aparecenErrores) ?  'red' : 'black'}"
+        id="tlfn_register" formControlName="phoneNumber">
+        <div class="errores">
+            <div *ngIf="contactForm.get('phoneNumber')?.errors?.['required'] && aparecenErrores">
+                · El campo de número de teléfono es obligatorio
+            </div>
+            <div *ngIf="contactForm.get('phoneNumber')?.errors?.['pattern'] && aparecenErrores">
+                · Introduzca un número de teléfono válido
+            </div>
+            <div *ngIf="contactForm.get('phoneNumber')?.errors?.['max'] && aparecenErrores">
+                · Introduzca un número de teléfono válido de 9 dígitos
+            </div>
+        </div>
+
+        <!-- Campo Asunto -->
+        <p>Asunto del mensaje *</p>
+        <input placeholder="Escriba el asunto de su petición..." formControlName="subject"
+        [ngStyle]="{'border-color': (contactForm.get('subject')?.errors && aparecenErrores) ?  'red' : 'black'}"
+        >
+        <div class="errores">
+            <div *ngIf="contactForm.get('subject')?.errors?.['required'] && aparecenErrores">
+                · El campo del Asunto del mensaje es obligatorio
+            </div>
+        </div>
+
+        <!-- Campo Mensaje -->
+        <p>Mensaje *</p>
+        <textarea placeholder="Escriba los motivos para petición de contacto.." id="textareaContact" formControlName="message"
+        [ngStyle]="{'border-color': (contactForm.get('message')?.errors && aparecenErrores) ?  'red' : 'black'}"></textarea>
+        <div class="errores">
+            <div *ngIf="contactForm.get('message')?.errors?.['required'] && aparecenErrores">
+                · Es necesario rellenar el mensaje, para poder ayudarle con su petición
+            </div>
+            <div *ngIf="contactForm.get('message')?.errors?.['minlength'] && aparecenErrores">
+                · El mensaje es demasiado corto, al menos necesita 6 caracteres 
+            </div>
+            <div *ngIf="contactForm.get('message')?.errors?.['maxlength'] && aparecenErrores">
+                · El mensaje es demasiado largo, como maximo se permiten 200 caracteres
+            </div>
+        </div>
+
+        <input type="submit" class="btn" id="send_contact" value="Enviar">
+      </form>
+    </section>
+
+    <section class="item-colS2">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.4054730875005!2d-15.453958984579105!3d28.073172215925936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4095d45a6f90ef%3A0xdc47519abbbe0084!2sEscuela%20de%20Ingenier%C3%ADa%20Inform%C3%A1tica!5e0!3m2!1ses!2ses!4v1679088985599!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="item-colS2">
+      <h2 id="contactCards_h2">Información de Contacto de la Clínica</h2>
+
+      <section id="contactCards" class="grid">
+
+        <app-card
+        *ngFor="let subitem of infoCard" [image]="subitem.image" [title]="subitem.title"
+        [description]="subitem.description" >
+        </app-card>
+
+
+      </section>
+
+    </section>
+
+  </div>

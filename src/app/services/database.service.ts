@@ -7,6 +7,8 @@ import { User } from '../interfaces/user.interface';
 
 import { Doctor } from '../interfaces/doctor.interface';
 import { user } from '@angular/fire/auth';
+import { Review } from '../interfaces/review.interface';
+import { Contact } from '../interfaces/contact.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -59,6 +61,21 @@ export class DatabaseService{
   addUser(User: User) {
     const userRef = collection(this.firebase, 'users');
     return addDoc(userRef, User);
+  }
+
+  addReview(Review: Review) {
+    const reviewRef = collection(this.firebase, 'reviews');
+    return addDoc(reviewRef, Review);
+  }
+
+  getInfoCards(): Observable<any[]> {
+    const infoCardRef = collection(this.firebase, 'contactUs');
+    return collectionData(infoCardRef);
+  }
+
+  addContactMessage(Message: Contact) {
+    const reviewRef = collection(this.firebase, 'contactMessages');
+    return addDoc(reviewRef, Message);
   }
 
 }
