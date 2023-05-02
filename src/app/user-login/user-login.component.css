@@ -1,0 +1,15 @@
+input{
+    margin-bottom: 10px;
+}
+
+.errores {
+    color: red;
+    margin-bottom: 1em;
+}
+
+#bottomError {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}

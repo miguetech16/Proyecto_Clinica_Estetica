@@ -23,6 +23,7 @@ import { TitleWithImageComponent } from './title-with-image/title-with-image.com
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ImageTitleDescriptionComponent } from './image-title-description/image-title-description.component';
 import { FaqsComponent } from './faqs/faqs.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { FaqsComponent } from './faqs/faqs.component';
     TitleWithImageComponent,
     AboutUsComponent,
     ImageTitleDescriptionComponent,
-    FaqsComponent
+    FaqsComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

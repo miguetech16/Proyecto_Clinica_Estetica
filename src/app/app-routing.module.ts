@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { TreatmentsComponent } from './treatments/treatments.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 import { TreatmentComponent } from './treatment/treatment.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'', redirectTo:'/main', pathMatch:'full' },
   {path:'main', component: MainComponent},
   {path:'treatments', component: TreatmentsComponent},
-  {path:'user-register', component: UserRegisterComponent}, 
+  {path:'user-register', component: UserRegisterComponent},
+  {path:'user-login', component: UserLoginComponent},
   {path:'aboutUs', component: AboutUsComponent},
   {path:'treatment/:name', component: TreatmentComponent},
   {path:'promotions', component: PromotionsComponent},

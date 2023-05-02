@@ -1,0 +1,42 @@
+<div class="layoutCenter">
+    <section class="logIn">
+        <h2>Iniciar Sesión</h2>
+        <form name="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <!-- Campo Correo -->
+            <label>Correo:</label>
+            <input type="email"
+            [ngStyle]="{'border-color': (loginForm.get('userEmail')?.errors && aparecenErrores) ?  'red' : 'black'}"
+            id="email_register"
+            formControlName="userEmail">
+            <div class="errores">
+                <div *ngIf="loginForm.get('userEmail')?.errors?.['required'] && aparecenErrores">
+                    · El campo de correo electrónico es obligatorio
+                </div>
+                <div *ngIf="loginForm.get('userEmail')?.errors?.['pattern'] && aparecenErrores">
+                    · Introduzca un correo electrónico válido
+                </div>
+            </div>
+    
+            <!-- Campo Contraseña -->
+            <label>Contraseña:</label>
+            <input id="passwd"
+            [ngStyle]="{'border-color': (loginForm.get('password')?.errors && aparecenErrores) ?  'red' : 'black'}"
+            type="password" 
+            formControlName="password">
+            <div class="errores">
+                <div *ngIf="loginForm.get('password')?.errors?.['required'] && aparecenErrores">
+                    · El campo de la contraseña es obligatorio.
+                </div>
+            </div>
+    
+            <input  type="submit" id="send_login" value="Iniciar Sesión">
+            <div id="bottomError" *ngIf="exist == false">{{userError}}</div>
+    
+        </form>
+    </section>
+
+    
+    
+
+
+</div>
