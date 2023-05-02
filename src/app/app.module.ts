@@ -25,6 +25,7 @@ import { ImageTitleDescriptionComponent } from './image-title-description/image-
 import { FaqsComponent } from './faqs/faqs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ImageTitleDescriptionComponent,
     FaqsComponent,
     ReviewsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
