@@ -31,7 +31,8 @@
     
             <input  type="submit" id="send_login" value="Iniciar Sesión">
             <div id="bottomError" *ngIf="exist == false">{{userError}}</div>
-    
+            
+            <h5>No tienes cuenta?: <b><a [routerLink]="['/user-register']">REGISTRATE</a></b></h5>
         </form>
     </section>
 
