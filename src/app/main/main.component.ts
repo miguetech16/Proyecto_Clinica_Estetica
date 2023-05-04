@@ -20,9 +20,9 @@ export class MainComponent {
         this.main = main
       })
 
-      this.database.getSecondary()
+      this.database.getItemsMain()
       .subscribe(secondary => {
-        this.secondary = secondary;
+      this.secondary = secondary;
         
       })
 

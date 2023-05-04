@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../services/database.service';
+import { Faq } from '../interfaces/faq.interface';
 
 @Component({
   selector: 'app-faqs',
@@ -8,7 +9,7 @@ import { DatabaseService } from '../services/database.service';
 })
 export class FaqsComponent {
   title= "FAQs"
-  faqs!: any[]
+  faqs!: Faq[]
   
   constructor(private database: DatabaseService){}
 

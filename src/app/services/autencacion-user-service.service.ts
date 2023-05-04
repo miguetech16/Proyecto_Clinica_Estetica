@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, fetchSignInMethodsForEmail } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, fetchSignInMethodsForEmail, authState } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +26,10 @@ export class AutencaciónUserServiceService {
 
   fetchEmail(email: string) {
     return fetchSignInMethodsForEmail(this.auth, email) 
+  }
+
+  estadousuario(){
+    return authState(this.auth);
   }
 
 }

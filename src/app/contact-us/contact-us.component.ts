@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { DatabaseService } from '../services/database.service';
 import { Contact } from '../interfaces/contact.interface'
 import { Router } from '@angular/router';
+import { AutencaciónUserServiceService } from '../services/autencacion-user-service.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -13,23 +14,46 @@ export class ContactUsComponent implements OnInit{
 
 contactForm!: FormGroup
 contact!: Contact
-aparecenErrores: boolean = false
 infoCard!: any[]
+user: any
+aparecenErrores: boolean = false
+aparece = false
 
-constructor(private builder: FormBuilder, private database: DatabaseService, private router: Router ) { }
+constructor(private builder: FormBuilder, private database: DatabaseService, private router: Router, private authUser: AutencaciónUserServiceService) { }
 
-ngOnInit(): void {
+ async ngOnInit(){
+  await this.authUser.estadousuario().subscribe(user => {
+    if ( user != null){
+      console.log(user?.email)
+    }
+    else{
+      console.log("AAA")
+    }
+  })
+  this.aparece = true
+  //console.log(usuarioactual)
+  
+
   this.contactForm = this.initForm();
 
   this.database.getInfoCards()
   .subscribe(infoForCards => {
     this.infoCard = infoForCards;
 
-    console.log(this.infoCard)
-})
+    //console.log(this.infoCard)
+  })
 
 }
 
+
+usuarioregistrado(){
+  if ( this.authUser.currentUser() != null){
+    console.log(this.authUser.currentUser()?.email)
+  }
+  else{
+    console.log("AAA")
+  }
+}
 
 initForm(): FormGroup {
   return this.builder.group({
@@ -66,9 +90,9 @@ initForm(): FormGroup {
 async onSubmit(){
   if (this.contactForm.valid){
   this.aparecenErrores = false
-  console.log('contactForm ->', this.contactForm.value);
+  //console.log('contactForm ->', this.contactForm.value);
   const response = await this.database.addContactMessage(this.contactForm.value);
-  console.log(response);
+  alert("Mensaje enviado con exito");
   this.router.navigate(['/main']);
 } else {
   this.aparecenErrores = true;

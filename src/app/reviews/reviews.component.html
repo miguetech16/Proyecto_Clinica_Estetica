@@ -1,6 +1,6 @@
 
 <div class="grid" id="reseñas">
-    <section class="item-col3-rowS7">
+    <section *ngIf="registrado" class="item-col3-rowS7">
         <form class="formCont" name="form" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
             <h2>VALÓRANOS</h2>
 
@@ -78,4 +78,16 @@
             <input type="submit" class="btn" id="send_review" value="Enviar">
         </form>
     </section>
+
+    <details *ngFor="let review of reviews" [ngClass]="registrado ? 'item-colS2' : 'item-colS3'">
+        <summary>
+            <div class="reseña">{{review.userName}}</div> 
+            <div class="estrellas">{{"★".repeat(review.valoration)}}</div>
+        </summary>
+        <h2>{{review.reviewTitle}}</h2>
+        <p class="text">
+          {{review.review}}
+        </p>
+    </details>
+
 </div>

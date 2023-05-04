@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
 import { Review } from '../interfaces/review.interface';
+import { AutencaciónUserServiceService } from '../services/autencacion-user-service.service';
 
 @Component({
   selector: 'app-reviews',
@@ -13,11 +14,21 @@ export class ReviewsComponent implements OnInit{
   reviewForm!: FormGroup
   reviews!: Review[]
   aparecenErrores = false;
+  registrado = true;
 
-  constructor (private builder: FormBuilder, private database: DatabaseService) { }
+  constructor (private builder: FormBuilder, private database: DatabaseService, private authUser: AutencaciónUserServiceService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.reviewForm = this.initForm()
+
+    await this.database.getReviews()
+    .subscribe(reviews => {
+      this.reviews = reviews
+    })
+
+    if(this.authUser.currentUser() != null){
+      this.registrado = true;
+    }
   }
 
   initForm(): FormGroup {
