@@ -14,21 +14,53 @@ export class ReviewsComponent implements OnInit{
   reviewForm!: FormGroup
   reviews!: Review[]
   aparecenErrores = false;
-  registrado = true;
+  registrado = false;
+  ReviewRealizada = false;
+  modificandoReview = false;
+  aparece = false;
 
   constructor (private builder: FormBuilder, private database: DatabaseService, private authUser: AutencaciónUserServiceService) { }
 
   async ngOnInit() {
+    await this.authUser.estadousuario().subscribe(user => {
+      if ( user != null){
+        this.registrado = true;
+        this.database.getUserwithEmail(user.email!).subscribe( async user => {
+          this.reviewForm.controls['userName'].setValue(user[0].userName);
+          this.reviewForm.controls['userName'].disable();
+          this.reviewForm.controls['userEmail'].setValue(user[0].userEmail);
+          this.reviewForm.controls['userEmail'].disable();
+          await this.database.getReviewwithEmail(user[0].userEmail).subscribe( reviews => {
+            if (reviews[0] != undefined){
+              this.reviewForm.controls['valoration'].setValue(reviews[0].valoration);
+              this.reviewForm.controls['reviewTitle'].setValue(reviews[0].reviewTitle);
+              this.reviewForm.controls['review'].setValue(reviews[0].review);
+              this.reviewForm.controls['valoration'].disable();
+              this.reviewForm.controls['reviewTitle'].disable();
+              this.reviewForm.controls['review'].disable();
+              this.ReviewRealizada = true;
+            } else{
+              this.reviewForm.controls['valoration'].setValue("");
+              this.reviewForm.controls['reviewTitle'].setValue("");
+              this.reviewForm.controls['review'].setValue("");
+              this.reviewForm.controls['valoration'].enable();
+              this.reviewForm.controls['reviewTitle'].enable();
+              this.reviewForm.controls['review'].enable();
+              this.ReviewRealizada = false;
+            }
+          })
+        })
+      }
+    })
+
+    this.aparece = true
+
     this.reviewForm = this.initForm()
 
     await this.database.getReviews()
     .subscribe(reviews => {
       this.reviews = reviews
     })
-
-    if(this.authUser.currentUser() != null){
-      this.registrado = true;
-    }
   }
 
   initForm(): FormGroup {
@@ -62,17 +94,49 @@ export class ReviewsComponent implements OnInit{
     })
   }
 
+  modoEdicion(){
+    this.modificandoReview = true
+    this.aparecenErrores = true;
+    this.reviewForm.controls['valoration'].enable();
+    this.reviewForm.controls['reviewTitle'].enable();
+    this.reviewForm.controls['review'].enable();
+  }
+
+  guardarEdicion(){
+    this.modificandoReview = false;
+    this.aparecenErrores = false;
+    this.reviewForm.controls['valoration'].disable();
+    this.reviewForm.controls['reviewTitle'].disable();
+    this.reviewForm.controls['review'].disable();
+  }
+
+  cacelarEdicion(){
+    this.modificandoReview = false;
+    this.aparecenErrores = false;
+    this.reviewForm.controls['valoration'].disable();
+    this.reviewForm.controls['reviewTitle'].disable();
+    this.reviewForm.controls['review'].disable();
+  }
+
   async onSubmit(){
     if (this.reviewForm.valid){
-    this.aparecenErrores = false
-    console.log('ReviewForm ->', this.reviewForm.value);
-    const response = await this.database.addReview(this.reviewForm.value);
-    console.log(response);
-  } else {
-    this.aparecenErrores = true;
-    console.log("Error en el formulario");
+      this.reviewForm.controls['userName'].enable();
+      this.reviewForm.controls['userEmail'].enable();
+      this.aparecenErrores = false
+      await this.database.addReview(this.reviewForm.value);
+      this.reviewForm.controls['userName'].disable();
+      this.reviewForm.controls['userEmail'].disable();
+      this.reviewForm.controls['valoration'].disable();
+      this.reviewForm.controls['reviewTitle'].disable();
+      this.reviewForm.controls['review'].disable();
+      this.reviewForm.controls['valoration'].setValue("");
+      this.reviewForm.controls['reviewTitle'].setValue("");
+      this.reviewForm.controls['review'].setValue("");
+    } else {
+      this.aparecenErrores = true;
+      console.log("Error en el formulario");
+    }
   }
-}
 
 
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData, doc, docData, addDoc } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, doc, docData, addDoc, query, where } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Treatment } from '../interfaces/treatment.interface';
 import { Promotion } from '../interfaces/promotion.interface';
@@ -35,6 +35,11 @@ export class DatabaseService{
     const MainRef = collection(this.firebase, 'reviews');
     return collectionData(MainRef, {idField: 'id'}) as Observable<Review[]>;;
   }
+
+  getReviewwithEmail(email:string): Observable<Review[]> {
+    const q = query(collection(this.firebase, 'reviews'), where('userEmail','==', email))
+    return collectionData(q, {idField: 'id'}) as Observable<Review[]>;;
+  }
   
   getFaqs(): Observable<Faq[]> {
     const faqsRef = collection(this.firebase, 'faq');
@@ -51,6 +56,11 @@ export class DatabaseService{
     return collectionData(userRef, { idField: 'userDni'}) as Observable<User[]>;
   }
 
+  getUserwithEmail(email:string): Observable<User[]>{
+    const q = query(collection(this.firebase, 'users'), where('userEmail','==', email));
+    return collectionData(q, { idField: 'id' }) as Observable<User[]>;
+  }
+
   getMain(): Observable<any[]> {
     const MainRef = collection(this.firebase, 'home');
     return collectionData(MainRef, {idField: 'id'});
@@ -58,28 +68,24 @@ export class DatabaseService{
   
   getItemsMain(): Observable<any[]>{
     const secondaryRef = collection(this.firebase, 'home/homeInformation/items');
-    console.log(secondaryRef)
     return collectionData(secondaryRef, { idField: 'id' })
   }
 
   getInfoCards(): Observable<any[]> {
     const infoCardRef = collection(this.firebase, 'contactUs');
-    return collectionData(infoCardRef);
+    return collectionData(infoCardRef, { idField: 'id' });
   }
-  
-  //Corregir
+
   addUser(User: User) {
     const userRef = collection(this.firebase, 'users');
     return addDoc(userRef, User);
   }
   
-  //Corregir
   addReview(Review: Review) {
     const reviewRef = collection(this.firebase, 'reviews');
     return addDoc(reviewRef, Review);
   }
   
-  //Corregir
   addContactMessage(Message: Contact) {
     const reviewRef = collection(this.firebase, 'contactMessages');
     return addDoc(reviewRef, Message);

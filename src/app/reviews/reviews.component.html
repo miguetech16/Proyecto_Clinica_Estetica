@@ -1,6 +1,6 @@
 
 <div class="grid" id="reseñas">
-    <section *ngIf="registrado" class="item-col3-rowS7">
+    <section *ngIf="registrado && aparece" class="item-col3-rowS7">
         <form class="formCont" name="form" [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
             <h2>VALÓRANOS</h2>
 
@@ -61,7 +61,7 @@
             <!-- Campo Reseña -->
             <p>Valoración *</p>
             <textarea placeholder="Escriba los motivos de la puntuación asignada al servicio..." id="textareaReviews" formControlName="review"
-            [ngStyle]="{'border-color': (reviewForm.get('reviewTitle')?.errors && aparecenErrores) ?  'red' : 'black'}"></textarea>
+            [ngStyle]="{'border-color': (reviewForm.get('review')?.errors && aparecenErrores) ?  'red' : 'black'}"></textarea>
             <div class="errores">
                 <div *ngIf="reviewForm.get('review')?.errors?.['required'] && aparecenErrores">
                     · Es necesario rellenar la reseña, con su experiencia
@@ -75,7 +75,10 @@
             </div>
 
             <!-- Botón de subida -->
-            <input type="submit" class="btn" id="send_review" value="Enviar">
+            <input type="submit" class="btn" id="send_review" value="Enviar" *ngIf="!ReviewRealizada">
+            <button *ngIf="ReviewRealizada && !modificandoReview" (click)="modoEdicion()" class="btn" >Editar reseña</button>
+            <button *ngIf="modificandoReview" (click)="guardarEdicion()" class="btn">Guardar reseña</button>
+            <button *ngIf="modificandoReview" (click)="cacelarEdicion()" class="btn">Cancelar Cambios</button>
         </form>
     </section>
 
