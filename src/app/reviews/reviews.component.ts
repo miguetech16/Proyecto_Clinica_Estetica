@@ -10,14 +10,19 @@ import { AutencaciónUserServiceService } from '../services/autencacion-user-ser
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent implements OnInit{
-
+  title = "Valoraciones"
   reviewForm!: FormGroup
   reviews!: Review[]
+  reviewOfUserId!: string
   aparecenErrores = false;
   registrado = false;
   ReviewRealizada = false;
   modificandoReview = false;
   aparece = false;
+
+  guardadoValoration = "";
+  guardadoTitleReview = "";
+  guardadoReview = "";
 
   constructor (private builder: FormBuilder, private database: DatabaseService, private authUser: AutencaciónUserServiceService) { }
 
@@ -32,6 +37,7 @@ export class ReviewsComponent implements OnInit{
           this.reviewForm.controls['userEmail'].disable();
           await this.database.getReviewwithEmail(user[0].userEmail).subscribe( reviews => {
             if (reviews[0] != undefined){
+              this.reviewOfUserId = reviews[0].id!;
               this.reviewForm.controls['valoration'].setValue(reviews[0].valoration);
               this.reviewForm.controls['reviewTitle'].setValue(reviews[0].reviewTitle);
               this.reviewForm.controls['review'].setValue(reviews[0].review);
@@ -40,6 +46,7 @@ export class ReviewsComponent implements OnInit{
               this.reviewForm.controls['review'].disable();
               this.ReviewRealizada = true;
             } else{
+              this.reviewOfUserId = "";
               this.reviewForm.controls['valoration'].setValue("");
               this.reviewForm.controls['reviewTitle'].setValue("");
               this.reviewForm.controls['review'].setValue("");
@@ -100,11 +107,15 @@ export class ReviewsComponent implements OnInit{
     this.reviewForm.controls['valoration'].enable();
     this.reviewForm.controls['reviewTitle'].enable();
     this.reviewForm.controls['review'].enable();
+    this.guardadoValoration = this.reviewForm.controls['valoration'].value;
+    this.guardadoTitleReview = this.reviewForm.controls['reviewTitle'].value;
+    this.guardadoReview = this.reviewForm.controls['review'].value;
   }
 
-  guardarEdicion(){
+  async guardarEdicion(){
     this.modificandoReview = false;
     this.aparecenErrores = false;
+    const respuesta = await this.database.updateReview(this.reviewOfUserId, this.reviewForm.value);
     this.reviewForm.controls['valoration'].disable();
     this.reviewForm.controls['reviewTitle'].disable();
     this.reviewForm.controls['review'].disable();
@@ -113,6 +124,9 @@ export class ReviewsComponent implements OnInit{
   cacelarEdicion(){
     this.modificandoReview = false;
     this.aparecenErrores = false;
+    this.reviewForm.controls['valoration'].setValue(this.guardadoValoration);
+    this.reviewForm.controls['reviewTitle'].setValue(this.guardadoTitleReview);
+    this.reviewForm.controls['review'].setValue(this.guardadoReview);
     this.reviewForm.controls['valoration'].disable();
     this.reviewForm.controls['reviewTitle'].disable();
     this.reviewForm.controls['review'].disable();

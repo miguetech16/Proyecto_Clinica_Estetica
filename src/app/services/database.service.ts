@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, collectionData, doc, docData, addDoc, query, where } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, doc, docData, addDoc, query, where, updateDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Treatment } from '../interfaces/treatment.interface';
 import { Promotion } from '../interfaces/promotion.interface';
@@ -59,6 +59,11 @@ export class DatabaseService{
   getUserwithEmail(email:string): Observable<User[]>{
     const q = query(collection(this.firebase, 'users'), where('userEmail','==', email));
     return collectionData(q, { idField: 'id' }) as Observable<User[]>;
+  }
+
+  updateReview(id: string,new_review: Review){
+    const docu = doc(this.firebase, `reviews/${id}`);
+    updateDoc(docu, {valoration: new_review.valoration, reviewTitle: new_review.reviewTitle, review: new_review.review});
   }
 
   getMain(): Observable<any[]> {

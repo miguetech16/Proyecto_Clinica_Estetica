@@ -11,7 +11,7 @@ import { AutencaciónUserServiceService } from '../services/autencacion-user-ser
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit{
-
+title="Contacto"
 contactForm!: FormGroup
 contact!: Contact
 infoCard!: any[]
