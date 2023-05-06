@@ -19,8 +19,7 @@ export class HeaderComponent implements OnInit{
       this.router.navigate(['user-login'])
     }
     else{
-      this.router.navigate(['contactUs'])  
+      this.router.navigate(['user-profile'])  
     }
-    //this.authUser.logout()
   }
 }

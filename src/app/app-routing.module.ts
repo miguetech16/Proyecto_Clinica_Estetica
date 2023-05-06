@@ -9,7 +9,8 @@ import { PromotionsComponent } from './promotions/promotions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component'
+import { UserProfileComponent } from './user-profile/user-profile.component';;
 
 const routes: Routes = [
   {path:'', redirectTo:'/main', pathMatch:'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'faqs', component: FaqsComponent},
   {path:'reviews', component: ReviewsComponent},
   {path:'contactUs', component: ContactUsComponent},
+  {path:'user-profile', component: UserProfileComponent},
   {path:'**', redirectTo:'/main', pathMatch:'full' }
 ]
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -64,7 +64,7 @@ export class UserLoginComponent {
   login(email: string, password: string) {
     this.userAuth.login(email, password).then(
       (res) => {
-        this.router.navigate(['/main']);
+        this.router.navigate(['/user-profile']);
       },
       (err) => {
         this.userError = 'Contraseña incorrecta.';

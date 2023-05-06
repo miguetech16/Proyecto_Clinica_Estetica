@@ -26,6 +26,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { UserLoginComponent } from './user-login/user-login.component';
     FaqsComponent,
     ReviewsComponent,
     ContactUsComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
