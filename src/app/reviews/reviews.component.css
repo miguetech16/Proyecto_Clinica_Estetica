@@ -6,3 +6,7 @@ input{
     color: red;
     margin-bottom: 1em;
 }
+
+h2 {
+    font-size: 1.25em;
+}
