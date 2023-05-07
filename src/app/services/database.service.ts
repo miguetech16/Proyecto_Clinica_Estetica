@@ -56,6 +56,11 @@ export class DatabaseService{
     return collectionData(userRef, { idField: 'userDni'}) as Observable<User[]>;
   }
 
+  updateImageUser(idUser: string, fullpat: string){
+    const docRef = doc(this.firebase, `users/${idUser}`);
+    updateDoc(docRef, {userImage: fullpat});
+  }
+
   getUserwithEmail(email:string): Observable<User[]>{
     const q = query(collection(this.firebase, 'users'), where('userEmail','==', email));
     return collectionData(q, { idField: 'id' }) as Observable<User[]>;

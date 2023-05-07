@@ -3,7 +3,7 @@
     <button class="btn2 logout" (click)="logout()"><b>Logout</b></button>
 </section>
 <article class="usercard" *ngIf="aparece">
-    <img [src]="!imagenpropia ? 'https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/user_icon2.png?alt=media&token=44a05f1e-2575-43b8-b3c3-7fdd79f20f88' : 'https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/doctor1.jpg?alt=media&token=561bc119-8a27-47d3-bf93-e9e2f0475970'">
+    <img [src]="!imagenpropia ? 'https://firebasestorage.googleapis.com/v0/b/proyecto-clinica-estetic-93780.appspot.com/o/user_icon2.png?alt=media&token=44a05f1e-2575-43b8-b3c3-7fdd79f20f88' : imagendelUsuario">
     <section class="contenido-texto-card-usuario">
         <h2 id="user_name" >{{informacionUsuario.userName}}</h2>
         <h3>Correo electrónico:</h3>
@@ -14,5 +14,7 @@
         <p id="user_dni" > {{informacionUsuario.userDNI}}</p>
         <h3>Alergias:</h3>
         <p class="alergenos">{{informacionUsuario.Alergias}}</p>
+        <h4><b>Cambiar imagen de usuario</b></h4>
+        <input type="file" (change)="uploadImageUser($event)">
     </section>
 </article>

@@ -92,11 +92,11 @@ async onSubmit(){
   this.exist = false;
   this.aparecenErrores = true
   this.contradistintas = this.passwordConfirmation();
-  console.log(this.singupForm.value.userDNI)
   if (this.singupForm.valid){
     this.userValidation();
      if (!this.exist){
       const NuevoUsuario: User = {
+        userImage: "",
         userName: this.singupForm.value.userName,
         userEmail: this.singupForm.value.userEmail,
         phoneNumber: this.singupForm.value.phoneNumber,
@@ -105,8 +105,6 @@ async onSubmit(){
       }
       const responseAuth = await this.userAuth.registerUser(this.singupForm.value.userEmail, this.singupForm.value.password)
       const response = await this.database.addUser(NuevoUsuario);
-      console.log(responseAuth);
-      console.log(response);
       this.router.navigate(['/main']);
     }
   }
