@@ -13,7 +13,12 @@
         <h3>NIE/NIF:</h3>
         <p id="user_dni" > {{informacionUsuario.userDNI}}</p>
         <h3>Alergias:</h3>
-        <p class="alergenos">{{informacionUsuario.Alergias}}</p>
+        <div>
+        <textarea class="alergenos" [(ngModel)]="infoAlergenos" [disabled]="!modoEdicion"></textarea>
+        </div>
+        <button class="btn" id="btn_Editar" (click)="editarAlergenos()" *ngIf="!modoEdicion">Editar Alergenos</button>
+        <button class="btn" id="btn_Editar" (click)="guardarAlergenos()" *ngIf="modoEdicion">Guardar Edición</button>
+        <button class="btn" id="btn_Editar" (click)="cancelarAlergenos()" *ngIf="modoEdicion">Cancelar Edición</button>
         <h4><b>Cambiar imagen de usuario</b></h4>
         <input type="file" (change)="uploadImageUser($event)">
     </section>

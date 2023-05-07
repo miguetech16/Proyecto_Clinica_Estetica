@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
 import { Review } from '../interfaces/review.interface';
 import { AutencaciónUserServiceService } from '../services/autencacion-user-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.css']
 })
-export class ReviewsComponent implements OnInit{
+export class ReviewsComponent implements OnInit, OnDestroy{
   title = "Valoraciones"
   reviewForm!: FormGroup
   reviews!: Review[]
@@ -24,18 +25,25 @@ export class ReviewsComponent implements OnInit{
   guardadoTitleReview = "";
   guardadoReview = "";
 
+  suscripcionEstadoUsuario!: Subscription
+  suscripcionUsuario!: Subscription
+  suscripcionReview!: Subscription
+  suscripcionReviews!: Subscription
+
+
+
   constructor (private builder: FormBuilder, private database: DatabaseService, private authUser: AutencaciónUserServiceService) { }
 
   async ngOnInit() {
-    await this.authUser.estadousuario().subscribe(user => {
+    this.suscripcionEstadoUsuario = await this.authUser.estadousuario().subscribe(async user => {
       if ( user != null){
         this.registrado = true;
-        this.database.getUserwithEmail(user.email!).subscribe( async user => {
+        this.suscripcionUsuario = await this.database.getUserwithEmail(user.email!).subscribe( async user => {
           this.reviewForm.controls['userName'].setValue(user[0].userName);
           this.reviewForm.controls['userName'].disable();
           this.reviewForm.controls['userEmail'].setValue(user[0].userEmail);
           this.reviewForm.controls['userEmail'].disable();
-          await this.database.getReviewwithEmail(user[0].userEmail).subscribe( reviews => {
+          this.suscripcionReview = await this.database.getReviewwithEmail(user[0].userEmail).subscribe( reviews => {
             if (reviews[0] != undefined){
               this.reviewOfUserId = reviews[0].id!;
               this.reviewForm.controls['valoration'].setValue(reviews[0].valoration);
@@ -64,7 +72,7 @@ export class ReviewsComponent implements OnInit{
 
     this.reviewForm = this.initForm()
 
-    await this.database.getReviews()
+    this.suscripcionReviews = await this.database.getReviews()
     .subscribe(reviews => {
       this.reviews = reviews
     })
@@ -152,5 +160,12 @@ export class ReviewsComponent implements OnInit{
     }
   }
 
-
+  ngOnDestroy(): void {
+    this.suscripcionEstadoUsuario.unsubscribe();
+    this.suscripcionReviews.unsubscribe();
+    if(this.registrado){
+      this.suscripcionReview.unsubscribe();
+      this.suscripcionUsuario.unsubscribe();
+    }
+  }
 }

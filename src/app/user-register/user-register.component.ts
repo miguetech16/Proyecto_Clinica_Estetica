@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
 import { User } from '../interfaces/user.interface';
 import { Router } from '@angular/router';
 import { AutencaciónUserServiceService } from '../services/autencacion-user-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-user-register',
@@ -11,7 +12,7 @@ import { AutencaciónUserServiceService } from '../services/autencacion-user-ser
   styleUrls: ['./user-register.component.css']
 })
 
-export class UserRegisterComponent implements OnInit{
+export class UserRegisterComponent implements OnInit, OnDestroy{
  
  singupForm!: FormGroup;
  users!: User[];
@@ -20,12 +21,14 @@ export class UserRegisterComponent implements OnInit{
  contradistintas = true;
  userError: string = "Este usuario ya se encuentra registrado."
 
+ suscripcionUsuarios!: Subscription
+
  constructor (private builder: FormBuilder, private database: DatabaseService, private router: Router, private userAuth: AutencaciónUserServiceService) { }
 
- ngOnInit(): void {
+ async ngOnInit(){
   this.singupForm = this.initForm()
 
-  this.database.getUsers()
+  this.suscripcionUsuarios = await this.database.getUsers()
   .subscribe(users => {this.users = users})
  }
 
@@ -108,6 +111,10 @@ async onSubmit(){
       this.router.navigate(['/main']);
     }
   }
+ }
+
+ ngOnDestroy(): void {
+   this.suscripcionUsuarios.unsubscribe();
  }
  
 

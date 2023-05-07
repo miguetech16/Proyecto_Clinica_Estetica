@@ -61,6 +61,11 @@ export class DatabaseService{
     updateDoc(docRef, {userImage: fullpat});
   }
 
+  updateAllergiesInformation(idUser: string, information: string){
+    const docRef = doc(this.firebase, `users/${idUser}`);
+    updateDoc(docRef, {Alergias: information});
+  }
+
   getUserwithEmail(email:string): Observable<User[]>{
     const q = query(collection(this.firebase, 'users'), where('userEmail','==', email));
     return collectionData(q, { idField: 'id' }) as Observable<User[]>;

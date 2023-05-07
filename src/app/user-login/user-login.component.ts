@@ -6,7 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
-import { User } from '../interfaces/user.interface';
 import { Router } from '@angular/router';
 import { AutencaciónUserServiceService } from '../services/autencacion-user-service.service';
 
@@ -17,7 +16,6 @@ import { AutencaciónUserServiceService } from '../services/autencacion-user-ser
 })
 export class UserLoginComponent {
   loginForm!: FormGroup;
-  users!: User[];
   aparecenErrores = false;
   exist: boolean = true;
   userError: string = '';
@@ -31,10 +29,6 @@ export class UserLoginComponent {
 
   ngOnInit(): void {
     this.loginForm = this.initForm();
-
-    this.database.getUsers().subscribe((users) => {
-      this.users = users;
-    });
   }
 
   initForm(): FormGroup {

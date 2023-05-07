@@ -19,14 +19,4 @@ export class TreatmentsComponent implements OnInit {
   ngOnInit(): void {
     this.treatments = this.database.getTreatments();
   }
-
-  /** 
-  subscription!: Subscription;
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe;
-  }
-  */
-
-  
-
 }

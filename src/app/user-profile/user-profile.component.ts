@@ -16,6 +16,9 @@ export class UserProfileComponent implements OnInit, OnDestroy {
   informacionUsuario!: User
   imagendelUsuario!: string
   aparece = false
+  infoAlergenos = ""
+  cpinfoAlergenos = ""
+  modoEdicion = false
 
   suscripcionEstadoUsuario!: Subscription
   suscripcionUsuario!: Subscription
@@ -27,6 +30,7 @@ export class UserProfileComponent implements OnInit, OnDestroy {
       if (userstate != null){
         this.suscripcionUsuario = await this.database.getUserwithEmail(userstate?.email!).subscribe(user =>{
           this.informacionUsuario = user[0];
+          this.infoAlergenos = this.informacionUsuario.Alergias;
           if(this.informacionUsuario.userImage != ""){
             this.servicioImagenes.cargarUrlImagenUsuario(this.informacionUsuario.userImage).then(resp => {
               this.imagendelUsuario = resp
@@ -39,6 +43,10 @@ export class UserProfileComponent implements OnInit, OnDestroy {
           }
           this.aparece = true
         })
+      }
+      else {
+        this.suscripcionUsuario = this.authUser.estadousuario().subscribe()
+        this.router.navigate(['user-login'])
       }
     })
     
@@ -62,9 +70,27 @@ export class UserProfileComponent implements OnInit, OnDestroy {
     
   }
 
+  editarAlergenos(){
+    this.modoEdicion = true
+    this.cpinfoAlergenos = this.infoAlergenos
+  }
+
+  guardarAlergenos(){
+    this.modoEdicion = false
+    this.database.updateAllergiesInformation(this.informacionUsuario.id!,this.infoAlergenos)
+  }
+
+  cancelarAlergenos(){
+    this.modoEdicion = false
+    this.infoAlergenos = this.cpinfoAlergenos
+  }
+
   ngOnDestroy(): void {
     this.suscripcionEstadoUsuario.unsubscribe();
-    this.suscripcionUsuario.unsubscribe();
+    if (this.aparece == true){
+      this.suscripcionUsuario!.unsubscribe();
+    }
+    
   }
 
 }

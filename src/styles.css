@@ -490,9 +490,12 @@
   
   .usercard .contenido-texto-card-usuario .alergenos {
     text-align: justify;
-    margin-top: 1.5em;
     font-size: 1.2rem;
+    margin-bottom: 1em;
     color: #444;
+    width: 280px;
+    height: 140px;
+    resize: none;
   }
   
   .btn2 {
@@ -738,9 +741,13 @@
       font-size: 20px;
     }
   
-    .usercard .contenido-texto-card-usuario .alergenos {
-      padding-left: 10%;
-      padding-right: 10%;
+     .usercard .contenido-texto-card-usuario .alergenos {
+      font-size: 13px;
+      width: 240px;
+      height: 140px;
+    }
+
+    .usercard .contenido-texto-card-usuario input[type=file]{
       font-size: 13px;
     }
   
@@ -889,11 +896,6 @@
       margin-left: 0;
     }
   
-    .usercard .contenido-texto-card-usuario .alergenos {
-      padding-left: 10%;
-      padding-right: 10%;
-    }
-  
   }
   
   /* Tablets portrait*/
@@ -1009,11 +1011,6 @@
       margin: 0;
     }
   
-    /* Página Usuario */
-    .usercard .contenido-texto-card-usuario .alergenos {
-      padding-left: 10%;
-      padding-right: 10%;
-    }
   
     .cita,
     .logout {
@@ -1075,11 +1072,6 @@
       font-size: 2.5vw;
     }
   
-    /* Página Usuario */
-    .usercard .contenido-texto-card-usuario .alergenos {
-      padding-left: 20%;
-      padding-right: 20%;
-    }
   
     #promotionCards .card h3 {
       font-size: 2.5vw;
