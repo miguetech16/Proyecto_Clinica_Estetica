@@ -95,12 +95,11 @@ constructor(private builder: FormBuilder, private database: DatabaseService, pri
   async onSubmit(){
     if (this.contactForm.valid){
     this.aparecenErrores = false;
-    const response = await this.database.addContactMessage(this.contactForm.value);
     alert("Mensaje enviado con exito");
     this.contactForm.controls['userName'].enable();
     this.contactForm.controls['userEmail'].enable();
     this.contactForm.controls['phoneNumber'].enable();
-    console.log(this.contactForm.value)
+    const response = await this.database.addContactMessage(this.contactForm.value);
     if (this.usuarioregistrado()){
       this.contactForm.controls['userName'].disable();
     this.contactForm.controls['userEmail'].disable();
